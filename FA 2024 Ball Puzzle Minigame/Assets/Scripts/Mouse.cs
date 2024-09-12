@@ -25,13 +25,13 @@ public class Mouse : MonoBehaviour
 
         if (selectedObject)
         {
+            
             selectedObject.transform.position = mousePosition + offset;
             
         }
 
         if (Input.GetMouseButtonUp(0) && selectedObject)
         {
-
         
             selectedObject = null;
         }
