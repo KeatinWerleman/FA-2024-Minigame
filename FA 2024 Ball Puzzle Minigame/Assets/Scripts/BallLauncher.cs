@@ -24,7 +24,7 @@ public class BallLauncher : MonoBehaviour
     {
         
         GameObject newBall = Instantiate(ballPrefab, ballSpawnPoint.transform.position, ballSpawnPoint.transform.rotation);
-        newBall.GetComponent<Rigidbody2D>().AddForce(ballSpawnPoint.transform.right * launchSpeed);
+        newBall.GetComponent<Rigidbody2D>().AddForce(ballSpawnPoint.transform.localPosition * launchSpeed);
         availibleBalls -= 1;
         Debug.Log("Ball Launched/n Balls Remaining: " + availibleBalls);
     }

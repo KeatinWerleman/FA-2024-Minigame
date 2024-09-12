@@ -7,7 +7,6 @@ public class Ball : MonoBehaviour
     public float ballSpeed;
     public Vector3 ballDirection;
     public string winTag;
-    public string reflectTag;
 
 
     
