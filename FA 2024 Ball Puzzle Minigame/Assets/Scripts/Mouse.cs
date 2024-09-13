@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Unity.VisualScripting.Member;
 
 public class Mouse : MonoBehaviour
 {
@@ -32,7 +34,15 @@ public class Mouse : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0) && selectedObject)
         {
-        
+            
+            selectedObject.transform.position = new Vector3(Mathf.RoundToInt(selectedObject.transform.position.x), Mathf.RoundToInt(selectedObject.transform.position.y), 0f);
+            /*if (selectedObject.transform.position.x % 2 != 0f || selectedObject.transform.position.y != 0f)
+            
+            
+
+
+
+            }*/
             selectedObject = null;
         }
     }
