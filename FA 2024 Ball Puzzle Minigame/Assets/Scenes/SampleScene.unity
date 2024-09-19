@@ -153,6 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedObject: {fileID: 0}
+  initialPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &401068956
 Transform:
   m_ObjectHideFlags: 0
@@ -254,7 +255,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: 8, z: -10}
+  m_LocalPosition: {x: 15, y: 7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -419,7 +420,7 @@ Transform:
   m_GameObject: {fileID: 977585103}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 15.81, y: 10.14, z: 0}
+  m_LocalPosition: {x: 16.13, y: 7.89, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -442,6 +443,7 @@ MonoBehaviour:
   thisMirror: {fileID: 977585103}
   wallTag: Wall
   shooterTag: 
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1103354714
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,7 +597,7 @@ Transform:
   m_GameObject: {fileID: 1103354714}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.63, y: 6.59, z: 0}
+  m_LocalPosition: {x: 4.1, y: 6.73, z: 0}
   m_LocalScale: {x: 3, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -770,8 +772,8 @@ Transform:
   m_GameObject: {fileID: 1393479887}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 12, z: 0}
-  m_LocalScale: {x: 1, y: 5, z: 1}
+  m_LocalPosition: {x: 20, y: 11.5, z: 0}
+  m_LocalScale: {x: 1, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1130,6 +1132,7 @@ MonoBehaviour:
   thisMirror: {fileID: 1560410575}
   wallTag: Wall
   shooterTag: 
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1688639706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,7 +1292,7 @@ Transform:
   m_GameObject: {fileID: 1688639706}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.15, y: 3.67, z: 0}
+  m_LocalPosition: {x: 10.68, y: 4.14, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1312,6 +1315,7 @@ MonoBehaviour:
   thisMirror: {fileID: 1688639706}
   wallTag: Wall
   shooterTag: 
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2024588989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,7 +1475,7 @@ Transform:
   m_GameObject: {fileID: 2024588989}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 10.96, y: 7.14, z: 0}
+  m_LocalPosition: {x: 11.51, y: 6.82, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1494,6 +1498,7 @@ MonoBehaviour:
   thisMirror: {fileID: 2024588989}
   wallTag: Wall
   shooterTag: 
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2043051956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1605,7 +1610,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.020373344, y: 0.017678887}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1616,7 +1621,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.6772709, y: 0.89480585}
   m_EdgeRadius: 0
 --- !u!50 &2121854163
 Rigidbody2D:
@@ -1706,8 +1711,8 @@ Transform:
   m_GameObject: {fileID: 2121854161}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12, y: 6, z: 0}
-  m_LocalScale: {x: 1, y: 5, z: 0}
+  m_LocalPosition: {x: 12, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

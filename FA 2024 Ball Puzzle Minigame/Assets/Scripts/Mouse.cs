@@ -6,9 +6,17 @@ using static Unity.VisualScripting.Member;
 
 public class Mouse : MonoBehaviour
 {
+    public static Mouse Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
     public GameObject selectedObject;
     Vector3 offset;
+    public Vector3 initialPosition;
 
+    
     void Update()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -19,7 +27,9 @@ public class Mouse : MonoBehaviour
 
             if (targetObject.tag == "Mirror")
             {
+
                 selectedObject = targetObject.transform.gameObject;
+                initialPosition = selectedObject.transform.position;
                 offset = selectedObject.transform.position - mousePosition;
             }
 
@@ -36,14 +46,15 @@ public class Mouse : MonoBehaviour
         {
             
             selectedObject.transform.position = new Vector3(Mathf.RoundToInt(selectedObject.transform.position.x), Mathf.RoundToInt(selectedObject.transform.position.y), 0f);
-            /*if (selectedObject.transform.position.x % 2 != 0f || selectedObject.transform.position.y != 0f)
-            
-            
 
-
-
-            }*/
             selectedObject = null;
         }
+
     }
+    public void MoveBackToIntital(GameObject thisMirror)
+    {
+        thisMirror.transform.position = new Vector3 (initialPosition.x, initialPosition.y, 0f);
+    }
+
+
 }

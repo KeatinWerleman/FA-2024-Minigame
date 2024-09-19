@@ -11,10 +11,11 @@ public class Mirror : MonoBehaviour
     public GameObject thisMirror;
     public string wallTag;
     public string shooterTag;
+    public Vector3 startPosition;
     // Start is called before the first frame update
     void Start()
     {
-
+        startPosition = transform.position;
     }
 
     // Update is called once per frame
@@ -23,13 +24,15 @@ public class Mirror : MonoBehaviour
         
     }
 
-  
 
-    private void OnCollisionExit2D(Collision2D collision)
+
+    private void OnCollisionStay2D(Collision2D collision)
     {
-
-        
-        thisMirror.transform.position = new Vector3(Mathf.RoundToInt(thisMirror.transform.position.x), Mathf.RoundToInt(thisMirror.transform.position.y), 0f);
+        if (collision.gameObject.tag == "Wall")
+        {
+            Debug.Log("Mirror Inside Wall");
+            Mouse.Instance.MoveBackToIntital(thisMirror);
+        }
     }
 
 }
