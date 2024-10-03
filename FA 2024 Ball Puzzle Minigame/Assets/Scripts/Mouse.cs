@@ -53,6 +53,7 @@ public class Mouse : MonoBehaviour
     }
     public void MoveBackToIntital(GameObject thisMirror)
     {
+        Debug.Log("MOVE BACK");
         thisMirror.transform.position = new Vector3 (initialPosition.x, initialPosition.y, 0f);
     }
 

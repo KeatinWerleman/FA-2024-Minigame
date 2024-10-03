@@ -11,13 +11,14 @@ public class Mirror : MonoBehaviour
     public int maxHitCount;
     public GameObject thisMirror;
     public string wallTag;
-    public string shooterTag;
+   
     public TextMeshPro hitCountText;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        hitCount = maxHitCount;
+        hitCountText.SetText(hitCount.ToString());
     }
 
     // Update is called once per frame

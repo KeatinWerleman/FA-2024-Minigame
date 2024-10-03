@@ -8,15 +8,18 @@ public class BallLauncher : MonoBehaviour
 {
     public GameObject ballPrefab;
     public float launchSpeed;
-    public GameObject ballSpawnPoint;
-    bool canLaunchBall = true;
+    public Transform ballSpawnPoint;
+    
     public int availibleBalls;
     public List<GameObject> ballsInPlay;
     public Vector3 launchDirection;
     public TextMeshProUGUI ballsLeftText;
-    
-  
 
+
+    private void Start()
+    {
+        ballsLeftText.SetText(availibleBalls.ToString());
+    }
     void Update()
     {
         
@@ -30,6 +33,15 @@ public class BallLauncher : MonoBehaviour
             }   
         }
 
+        if (Input.GetKeyDown(KeyCode.W)) 
+        {
+            if (ballsInPlay.Count > 0)
+            {
+                Destroy(ballsInPlay[0]);
+                ballsInPlay.RemoveAt(0);
+            }
+        }
+
     }
     void LaunchBall()
     {
@@ -40,7 +52,8 @@ public class BallLauncher : MonoBehaviour
             ballsInPlay.RemoveAt(0);
         }
         GameManager.Instance.TurnLaunchStateOff();
-        GameObject newBall = Instantiate(ballPrefab, ballSpawnPoint.transform.position, Quaternion.identity);
+        
+        GameObject newBall = Instantiate(ballPrefab, ballSpawnPoint.position, transform.rotation);
         ballsInPlay.Add(newBall);
         newBall.GetComponent<Rigidbody2D>().AddForce(ballSpawnPoint.transform.localPosition * launchSpeed);
         availibleBalls -= 1;

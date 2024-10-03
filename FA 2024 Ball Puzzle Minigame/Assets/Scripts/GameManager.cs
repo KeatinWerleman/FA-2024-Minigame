@@ -52,6 +52,7 @@ public class GameManager : MonoBehaviour
         {
             mouseObject.SetActive(true);
             canWeMoveMirrors = true;
+            
         }
 
     }

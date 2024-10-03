@@ -8,6 +8,8 @@ TagManager:
   - Mirror
   - Wall
   - Target
+  - Location Thing
+  - Switch
   layers:
   - Default
   - TransparentFX

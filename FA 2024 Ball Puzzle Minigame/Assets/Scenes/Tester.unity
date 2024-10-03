@@ -732,7 +732,6 @@ MonoBehaviour:
   maxHitCount: 0
   thisMirror: {fileID: 685321724}
   wallTag: Wall
-  shooterTag: 
   hitCountText: {fileID: 1194349968}
 --- !u!50 &685321726
 Rigidbody2D:
@@ -916,7 +915,6 @@ MonoBehaviour:
   maxHitCount: 0
   thisMirror: {fileID: 764130635}
   wallTag: Wall
-  shooterTag: 
   hitCountText: {fileID: 318363829}
 --- !u!50 &764130637
 Rigidbody2D:
@@ -1100,7 +1098,6 @@ MonoBehaviour:
   maxHitCount: 0
   thisMirror: {fileID: 937525710}
   wallTag: Wall
-  shooterTag: 
   hitCountText: {fileID: 1803680707}
 --- !u!50 &937525712
 Rigidbody2D:
@@ -1238,7 +1235,7 @@ Transform:
   m_GameObject: {fileID: 937525710}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 12.6, y: 6.15, z: 0}
+  m_LocalPosition: {x: 13.83, y: 5.6, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1281,7 +1278,6 @@ MonoBehaviour:
   maxHitCount: 0
   thisMirror: {fileID: 1091756606}
   wallTag: Wall
-  shooterTag: 
   hitCountText: {fileID: 1513982239}
 --- !u!50 &1091756608
 Rigidbody2D:
@@ -1422,7 +1418,7 @@ Transform:
   m_GameObject: {fileID: 1091756606}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18, y: 7, z: 0}
+  m_LocalPosition: {x: 24.56, y: 5.35, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1604,7 +1600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 1422201317966632920, guid: 1ed2f4a72054c064589ffed563e607bc, type: 3}
   launchSpeed: 700
-  ballSpawnPoint: {fileID: 2043051956}
+  ballSpawnPoint: {fileID: 2043051957}
   availibleBalls: 5
   ballsInPlay: []
   launchDirection: {x: 1, y: 0, z: 0}
@@ -2284,9 +2280,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   affectedObject: {fileID: 1832059898}
+  objectLocationSprite: {fileID: 0}
   isSwitchActive: 0
-  positionA: {x: 12.5, y: 10, z: 0}
-  positionB: {x: 6.5, y: 10, z: 0}
+  tempPosition: {x: 0, y: 0, z: 0}
+  tempRotation:
+    value:
+      x: 0
+      y: 0
+      z: 0
+      w: 0
 --- !u!212 &1559278919
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2435,7 +2437,6 @@ MonoBehaviour:
   maxHitCount: 0
   thisMirror: {fileID: 1620967173}
   wallTag: Wall
-  shooterTag: 
   hitCountText: {fileID: 236268125}
 --- !u!50 &1620967175
 Rigidbody2D:
