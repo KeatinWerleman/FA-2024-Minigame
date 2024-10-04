@@ -50,6 +50,7 @@ public class GameManager : MonoBehaviour
     {
         if (canWeMoveMirrors == false)
         {
+            BallLauncher.Instance.ClearField();
             mouseObject.SetActive(true);
             canWeMoveMirrors = true;
             

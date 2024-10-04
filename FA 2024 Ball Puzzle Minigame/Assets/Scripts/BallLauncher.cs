@@ -15,6 +15,12 @@ public class BallLauncher : MonoBehaviour
     public Vector3 launchDirection;
     public TextMeshProUGUI ballsLeftText;
 
+    public static BallLauncher Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -35,11 +41,9 @@ public class BallLauncher : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W)) 
         {
-            if (ballsInPlay.Count > 0)
-            {
-                Destroy(ballsInPlay[0]);
-                ballsInPlay.RemoveAt(0);
-            }
+
+            ClearField();
+           
         }
 
     }
@@ -59,6 +63,16 @@ public class BallLauncher : MonoBehaviour
         availibleBalls -= 1;
         ballsLeftText.SetText(availibleBalls.ToString());
         Debug.Log("Ball Launched /n Balls Remaining: " + availibleBalls);
+        
+    }
+
+    public void ClearField()
+    {
+        if (ballsInPlay.Count > 0)
+        {
+            Destroy(ballsInPlay[0]);
+            ballsInPlay.RemoveAt(0);
+        }
         
     }
 

@@ -7,6 +7,8 @@ public class TargetChecker : MonoBehaviour
     public static TargetChecker Instance;
     public GameObject target;
     public GameObject target2;
+    public GameObject target3;
+    public GameObject target4;
     
     private void Awake()
     {
@@ -25,7 +27,7 @@ public class TargetChecker : MonoBehaviour
     
     public void AreTargetsHere()
     {
-        if (target == null && target2 == null)
+        if (target == null && target2 == null && target3 == null && target4 == null)
         {
             Debug.Log("NO TARGETS LEFT");
             GameManager.Instance.HandleWin();

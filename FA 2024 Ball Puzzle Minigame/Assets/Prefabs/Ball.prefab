@@ -161,6 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fe461f3f9fccd043a0229fe35995cc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ballSpeed: 250
-  ballDirection: {x: 0, y: 0, z: 0}
+  ballSpeed: 2
+  ballDirection: {x: 0, y: 0}
   winTag: 
