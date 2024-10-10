@@ -45,6 +45,8 @@ public class Mirror : MonoBehaviour
             hitCount--;
             hitCountText.SetText(hitCount.ToString());
             Debug.Log(collision.gameObject.transform.position);
+            collision.transform.position = new Vector3(Mathf.RoundToInt(collision.transform.position.x), Mathf.RoundToInt(collision.transform.position.y), 0f);
+            Debug.Log("ROUNDED POS" + collision.gameObject.transform.position);
         }
 
         if (hitCount <= 0)

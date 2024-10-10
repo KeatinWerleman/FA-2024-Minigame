@@ -8,7 +8,7 @@ public class Ball : MonoBehaviour
     public Vector2 ballDirection;
     public string winTag;
 
-    private void Update()
+  /*  private void Update()
     {
         ballDirection = new Vector2(1, 0).normalized;
         transform.position += (Vector3)ballDirection * ballSpeed * Time.deltaTime;
@@ -18,6 +18,8 @@ public class Ball : MonoBehaviour
         Vector2 surfaceNormal = collision.contacts[0].normal;
         ballDirection = Vector2.Reflect(ballDirection, surfaceNormal);
     }
+
+    */
 
 
 

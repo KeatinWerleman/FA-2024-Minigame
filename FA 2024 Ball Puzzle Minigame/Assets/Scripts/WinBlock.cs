@@ -13,7 +13,7 @@ public class WinBlock : MonoBehaviour
     {
         if(collision.gameObject.tag == "Ball")
         {
-            Debug.Log("Target Hit");
+            Debug.Log("Target Hit at " + collision.gameObject.transform.position);
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
             
