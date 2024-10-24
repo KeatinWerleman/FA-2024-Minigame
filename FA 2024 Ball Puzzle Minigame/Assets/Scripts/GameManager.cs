@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     public bool canWeMoveMirrors = true;
     public bool isLevelWon = false;
+    public GameObject levelWinPanel;
     
 
     private void Awake()
@@ -65,9 +67,18 @@ public class GameManager : MonoBehaviour
     {
        
         Debug.Log("LEVEL WON");
-        isLevelWon = true; 
+        isLevelWon = true;
+        levelWinPanel.SetActive(true);
+        UnlockNewLevel();
         //celebrate win, bring up menu with button for next level
         
+    }
+
+    void UnlockNewLevel()
+    {
+        PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
+        PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 1) + 1);
+        PlayerPrefs.Save();
     }
 
 

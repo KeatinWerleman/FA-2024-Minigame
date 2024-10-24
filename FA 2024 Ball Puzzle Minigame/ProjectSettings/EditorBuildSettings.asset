@@ -6,6 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Sample Level 5 - Back And Forth.unity
+    path: Assets/Scenes/Main Menu.unity
+    guid: 43854bcb6b2651c4ab9856c64c7c2140
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: f4763e38b735093439abd073b8c49c1a
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: 2bbc3f64ae756a54ea58d18a7bb0455c
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: ed848fafabf8ed44f95cc55246d41ec3
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: 70a973bf56615874f9ef1291eee8bb23
+  - enabled: 1
+    path: Assets/Scenes/Level 5.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Level 6.unity
+    guid: 443524874f6ab644aa4ad905290d04b8
   m_configObjects: {}
