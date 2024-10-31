@@ -284,7 +284,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 7
 --- !u!114 &7950047595632199430
 MonoBehaviour:
@@ -371,4 +371,4 @@ PolygonCollider2D:
       - {x: 2.01, y: -2.5}
       - {x: 2.21, y: -2.4199998}
       - {x: 2.3799999, y: -2.26}
-  m_UseDelaunayMesh: 0
+  m_UseDelaunayMesh: 1
