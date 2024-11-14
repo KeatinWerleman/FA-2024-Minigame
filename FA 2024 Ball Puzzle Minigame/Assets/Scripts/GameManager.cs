@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
     public bool canWeMoveMirrors = true;
     public bool isLevelWon = false;
     public GameObject levelWinPanel;
+    public Button stopLaunchingButton;
+    public GameObject tutorialPanel;
     
 
     private void Awake()
@@ -26,7 +29,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        mouseObject.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
@@ -39,12 +43,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void StartLevel()
+    {
+        tutorialPanel.SetActive(false);
+        mouseObject.SetActive(true);
+    }
+     
+
     public void TurnLaunchStateOff()
     {
         if (canWeMoveMirrors)
         {
             mouseObject.SetActive(false);
             canWeMoveMirrors = false;
+            stopLaunchingButton.interactable = true;
         }
     }
 
@@ -55,7 +67,8 @@ public class GameManager : MonoBehaviour
             BallLauncher.Instance.ClearField();
             mouseObject.SetActive(true);
             canWeMoveMirrors = true;
-            
+            stopLaunchingButton.interactable = false;
+
         }
 
     }
@@ -76,9 +89,12 @@ public class GameManager : MonoBehaviour
 
     void UnlockNewLevel()
     {
-        PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
-        PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 1) + 1);
-        PlayerPrefs.Save();
+        if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
+        {
+            PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
+            PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 1) + 1);
+            PlayerPrefs.Save();
+        }
     }
 
 

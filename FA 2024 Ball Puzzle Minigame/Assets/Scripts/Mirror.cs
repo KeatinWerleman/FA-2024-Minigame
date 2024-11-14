@@ -11,6 +11,7 @@ public class Mirror : MonoBehaviour
     public int maxHitCount;
     public GameObject thisMirror;
     public string wallTag;
+    public AudioClip ballBounceSound;
    
     public TextMeshPro hitCountText;
     
@@ -47,6 +48,7 @@ public class Mirror : MonoBehaviour
             Debug.Log(collision.gameObject.transform.position);
             collision.transform.position = new Vector3(Mathf.RoundToInt(collision.transform.position.x), Mathf.RoundToInt(collision.transform.position.y), 0f);
             Debug.Log("ROUNDED POS" + collision.gameObject.transform.position);
+            SoundFXManager.Instance.PlaySoundFXClip(ballBounceSound, transform, 1f);
         }
 
         if (hitCount <= 0)

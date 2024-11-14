@@ -9,12 +9,12 @@ public class BallLauncher : MonoBehaviour
     public GameObject ballPrefab;
     public float launchSpeed;
     public Transform ballSpawnPoint;
-    
+    public int maxAvailibleBalls;
     public int availibleBalls;
     public List<GameObject> ballsInPlay;
     public Vector3 launchDirection;
     public TextMeshProUGUI ballsLeftText;
-
+    public AudioClip ballLaunchClip;
     public static BallLauncher Instance;
 
     private void Awake()
@@ -25,6 +25,7 @@ public class BallLauncher : MonoBehaviour
     private void Start()
     {
         ballsLeftText.SetText(availibleBalls.ToString());
+        availibleBalls = maxAvailibleBalls;
     }
     void Update()
     {
@@ -56,10 +57,10 @@ public class BallLauncher : MonoBehaviour
             ballsInPlay.RemoveAt(0);
         }
         GameManager.Instance.TurnLaunchStateOff();
-        
+        SoundFXManager.Instance.PlaySoundFXClip(ballLaunchClip, transform, 1f);
         GameObject newBall = Instantiate(ballPrefab, ballSpawnPoint.position, transform.rotation);
+        newBall.GetComponent<Rigidbody2D>().AddForce(launchDirection * 150);
         ballsInPlay.Add(newBall);
-        newBall.GetComponent<Rigidbody2D>().AddForce(ballSpawnPoint.transform.localPosition * launchSpeed);
         availibleBalls -= 1;
         ballsLeftText.SetText(availibleBalls.ToString());
         Debug.Log("Ball Launched /n Balls Remaining: " + availibleBalls);

@@ -6,6 +6,7 @@ public class WinBlock : MonoBehaviour
 {
     public string ballTag;
     public GameObject thisTarget;
+    public AudioClip targetHitClip;
     
     // Start is called before the first frame update
     
@@ -16,6 +17,7 @@ public class WinBlock : MonoBehaviour
             Debug.Log("Target Hit at " + collision.gameObject.transform.position);
             Destroy(collision.gameObject);
             Destroy(this.gameObject);
+            SoundFXManager.Instance.PlaySoundFXClip(targetHitClip, transform, 1f);
             
 
         }

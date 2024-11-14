@@ -302,6 +302,7 @@ MonoBehaviour:
   maxHitCount: 1
   thisMirror: {fileID: 6841808351838942607}
   wallTag: Wall
+  ballBounceSound: {fileID: 8300000, guid: 8883eac6368c4b44eaacce49d86206b6, type: 3}
   hitCountText: {fileID: 4266732299128453693}
 --- !u!60 &6279677745681944552
 PolygonCollider2D:
