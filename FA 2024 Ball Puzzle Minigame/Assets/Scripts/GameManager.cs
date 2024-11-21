@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -24,12 +25,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+  
 
     // Start is called before the first frame update
     void Start()
     {
-        mouseObject.SetActive(false);
         Time.timeScale = 1f;
     }
 
@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
             TurnLaunchStateOn();
         
         }
+
+        
     }
 
     public void StartLevel()

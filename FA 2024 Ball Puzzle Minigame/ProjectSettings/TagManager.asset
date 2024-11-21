@@ -10,6 +10,7 @@ TagManager:
   - Target
   - Location Thing
   - Switch
+  - Launcher
   layers:
   - Default
   - TransparentFX

@@ -15,6 +15,7 @@ public class BallLauncher : MonoBehaviour
     public Vector3 launchDirection;
     public TextMeshProUGUI ballsLeftText;
     public AudioClip ballLaunchClip;
+    public float volume;
     public static BallLauncher Instance;
 
     private void Awake()
@@ -57,9 +58,9 @@ public class BallLauncher : MonoBehaviour
             ballsInPlay.RemoveAt(0);
         }
         GameManager.Instance.TurnLaunchStateOff();
-        SoundFXManager.Instance.PlaySoundFXClip(ballLaunchClip, transform, 1f);
+        SoundFXManager.Instance.PlaySoundFXClip(ballLaunchClip, transform, volume);
         GameObject newBall = Instantiate(ballPrefab, ballSpawnPoint.position, transform.rotation);
-        newBall.GetComponent<Rigidbody2D>().AddForce(launchDirection * 150);
+        newBall.GetComponent<Rigidbody2D>().AddForce(launchDirection * 150); 
         ballsInPlay.Add(newBall);
         availibleBalls -= 1;
         ballsLeftText.SetText(availibleBalls.ToString());

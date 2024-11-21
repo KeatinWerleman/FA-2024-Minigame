@@ -12,7 +12,7 @@ public class Mirror : MonoBehaviour
     public GameObject thisMirror;
     public string wallTag;
     public AudioClip ballBounceSound;
-   
+    public float volume;
     public TextMeshPro hitCountText;
     
     // Start is called before the first frame update
@@ -25,16 +25,16 @@ public class Mirror : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+         
     }
 
 
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Launcher")
         {
-            Debug.Log("Mirror Inside Wall");
+            Debug.Log("Touched Something Bad");
             Mouse.Instance.MoveBackToIntital(thisMirror);
         }
     }
@@ -48,7 +48,7 @@ public class Mirror : MonoBehaviour
             Debug.Log(collision.gameObject.transform.position);
             collision.transform.position = new Vector3(Mathf.RoundToInt(collision.transform.position.x), Mathf.RoundToInt(collision.transform.position.y), 0f);
             Debug.Log("ROUNDED POS" + collision.gameObject.transform.position);
-            SoundFXManager.Instance.PlaySoundFXClip(ballBounceSound, transform, 1f);
+            SoundFXManager.Instance.PlaySoundFXClip(ballBounceSound, transform, volume);
         }
 
         if (hitCount <= 0)

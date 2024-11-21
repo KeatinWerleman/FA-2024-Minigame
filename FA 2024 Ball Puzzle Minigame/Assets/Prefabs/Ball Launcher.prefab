@@ -398,11 +398,13 @@ MonoBehaviour:
   ballPrefab: {fileID: 1422201317966632920, guid: 1ed2f4a72054c064589ffed563e607bc, type: 3}
   launchSpeed: 150
   ballSpawnPoint: {fileID: 6716113665357052328}
+  maxAvailibleBalls: 5
   availibleBalls: 5
   ballsInPlay: []
   launchDirection: {x: 1, y: 0, z: 0}
   ballsLeftText: {fileID: 705611823577446796}
   ballLaunchClip: {fileID: 8300000, guid: 4d036c43a4df8584eb0ed902116acf5b, type: 3}
+  volume: 0.2
 --- !u!60 &2374636369346576621
 PolygonCollider2D:
   m_ObjectHideFlags: 0

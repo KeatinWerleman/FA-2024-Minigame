@@ -30,6 +30,7 @@ public class Mouse : MonoBehaviour
 
                 selectedObject = targetObject.transform.gameObject;
                 initialPosition = selectedObject.transform.position;
+
                 offset = selectedObject.transform.position - mousePosition;
             }
 

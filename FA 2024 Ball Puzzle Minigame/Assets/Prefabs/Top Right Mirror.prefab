@@ -132,6 +132,7 @@ MonoBehaviour:
   thisMirror: {fileID: 2363318767587686588}
   wallTag: Wall
   ballBounceSound: {fileID: 8300000, guid: 8883eac6368c4b44eaacce49d86206b6, type: 3}
+  volume: 0.2
   hitCountText: {fileID: 8860060747444331817}
 --- !u!60 &1223891895738191844
 PolygonCollider2D:
@@ -213,6 +214,7 @@ GameObject:
   - component: {fileID: 7159018890048575776}
   - component: {fileID: 2978123598579789486}
   - component: {fileID: 8860060747444331817}
+  - component: {fileID: 4442985936214996469}
   m_Layer: 0
   m_Name: Hit Count
   m_TagString: Untagged
@@ -373,3 +375,17 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2978123598579789486}
   m_maskType: 0
+--- !u!114 &4442985936214996469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3684064937116544275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c1085f5dd381a54d9cce3a78c7115d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rectTransform: {fileID: 7159018890048575776}
+  parentMirrorTransform: {fileID: 1658797386895244424}

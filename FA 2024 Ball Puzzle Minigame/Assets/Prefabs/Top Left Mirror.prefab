@@ -201,6 +201,7 @@ MonoBehaviour:
   thisMirror: {fileID: 1003790046341716066}
   wallTag: Wall
   ballBounceSound: {fileID: 8300000, guid: 8883eac6368c4b44eaacce49d86206b6, type: 3}
+  volume: 0.2
   hitCountText: {fileID: 10753545019583283}
 --- !u!1 &6945148148798833544
 GameObject:
@@ -213,6 +214,7 @@ GameObject:
   - component: {fileID: 4706302744029964477}
   - component: {fileID: 8048818397961333325}
   - component: {fileID: 10753545019583283}
+  - component: {fileID: 3824500497930852002}
   m_Layer: 0
   m_Name: Hit Count
   m_TagString: Untagged
@@ -373,3 +375,17 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 8048818397961333325}
   m_maskType: 0
+--- !u!114 &3824500497930852002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6945148148798833544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c1085f5dd381a54d9cce3a78c7115d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rectTransform: {fileID: 4706302744029964477}
+  parentMirrorTransform: {fileID: 918653703346525117}
