@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8167285275068429801}
   m_Layer: 0
   m_Name: Switch
-  m_TagString: Untagged
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   affectedObject: {fileID: 0}
   objectLocationSprite: {fileID: 0}
   isSwitchActive: 0
+  isThisMirror: 0
   switchHitClip: {fileID: 8300000, guid: c604a3e75fe5ed14e9fc0aaa2c078ac2, type: 3}
   volume: 0.2
   tempPosition: {x: 0, y: 0, z: 0}
@@ -111,6 +112,8 @@ MonoBehaviour:
       z: 0
       w: 0
   spriteRenderer: {fileID: 7890393019292743933}
+  switchCollider: {fileID: 0}
+  switchHitParticleSystem: {fileID: 0}
 --- !u!61 &8167285275068429801
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -94,7 +94,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7695865859641936124}
   - component: {fileID: 5591996851639468534}
-  - component: {fileID: 4968966619419010266}
   m_Layer: 0
   m_Name: Vertical Track
   m_TagString: Untagged
@@ -136,23 +135,6 @@ MonoBehaviour:
   upperEndpoint: {fileID: 0}
   objectOnTrack: {fileID: 0}
   trackConnector: {fileID: 5916133517915296039}
---- !u!114 &4968966619419010266
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4770330706889730526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d1197baac2798f49b057c22b81c544a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lowerEndpoint: {fileID: 8030742023471520978}
-  upperEndpoint: {fileID: 4415757103397108481}
-  objectOnTrack: {fileID: 0}
-  trackConnector: {fileID: 5916133517915296039}
-  trackScale: 5.34
 --- !u!1 &5810550532673068671
 GameObject:
   m_ObjectHideFlags: 0

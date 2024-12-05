@@ -14,6 +14,7 @@ public class Mirror : MonoBehaviour
     public AudioClip ballBounceSound;
     public float volume;
     public TextMeshPro hitCountText;
+    public GameObject mirrorHitParticleSystem;
     
     // Start is called before the first frame update
     void Start()
@@ -32,7 +33,7 @@ public class Mirror : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Launcher")
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Launcher" || collision.gameObject.tag == "Target" || collision.gameObject.tag == "Switch" || collision.gameObject.tag == "Location Sprite")
         {
             Debug.Log("Touched Something Bad");
             Mouse.Instance.MoveBackToIntital(thisMirror);
@@ -45,10 +46,14 @@ public class Mirror : MonoBehaviour
         {
             hitCount--;
             hitCountText.SetText(hitCount.ToString());
+            var particles = Instantiate(mirrorHitParticleSystem, transform.position, Quaternion.identity);
+            
             Debug.Log(collision.gameObject.transform.position);
             collision.transform.position = new Vector3(Mathf.RoundToInt(collision.transform.position.x), Mathf.RoundToInt(collision.transform.position.y), 0f);
             Debug.Log("ROUNDED POS" + collision.gameObject.transform.position);
             SoundFXManager.Instance.PlaySoundFXClip(ballBounceSound, transform, volume);
+            Destroy(particles);
+
         }
 
         if (hitCount <= 0)

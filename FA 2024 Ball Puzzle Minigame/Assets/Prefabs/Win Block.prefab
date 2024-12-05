@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6757631817177047925}
   m_Layer: 0
   m_Name: Win Block
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,6 +172,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballTag: Ball
-  thisTarget: {fileID: 0}
-  targetHitClip: {fileID: 0}
+  targetHitClip: {fileID: 8300000, guid: 66ec3fdfc11529c4b8cd935fc2d39c4b, type: 3}
   volume: 0.2
+  winBlockParticleExplosion: {fileID: 3530538991022913697, guid: 9e475e4e1df880240aa8e086f7299e68, type: 3}

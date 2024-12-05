@@ -11,6 +11,7 @@ TagManager:
   - Location Thing
   - Switch
   - Launcher
+  - Location Sprite
   layers:
   - Default
   - TransparentFX

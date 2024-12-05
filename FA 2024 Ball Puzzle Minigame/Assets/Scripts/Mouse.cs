@@ -14,6 +14,9 @@ public class Mouse : MonoBehaviour
     }
     public GameObject selectedObject;
     Vector3 offset;
+    public AudioClip pickUpSound;
+    public AudioClip putDownSound;
+    public float volume = 0.5f;
     public Vector3 initialPosition;
 
     
@@ -29,6 +32,8 @@ public class Mouse : MonoBehaviour
             {
 
                 selectedObject = targetObject.transform.gameObject;
+
+                SoundFXManager.Instance.PlaySoundFXClip(pickUpSound, transform, volume);
                 initialPosition = selectedObject.transform.position;
 
                 offset = selectedObject.transform.position - mousePosition;
@@ -40,12 +45,13 @@ public class Mouse : MonoBehaviour
         {
             
             selectedObject.transform.position = mousePosition + offset;
+
             
         }
 
         if (Input.GetMouseButtonUp(0) && selectedObject)
         {
-            
+            SoundFXManager.Instance.PlaySoundFXClip(putDownSound, transform, volume);
             selectedObject.transform.position = new Vector3(Mathf.RoundToInt(selectedObject.transform.position.x), Mathf.RoundToInt(selectedObject.transform.position.y), 0f);
 
             selectedObject = null;

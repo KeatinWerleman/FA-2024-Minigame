@@ -14,7 +14,6 @@ public class GameManager : MonoBehaviour
     public bool isLevelWon = false;
     public GameObject levelWinPanel;
     public Button stopLaunchingButton;
-    public GameObject tutorialPanel;
     
 
     private void Awake()
@@ -47,7 +46,7 @@ public class GameManager : MonoBehaviour
 
     public void StartLevel()
     {
-        tutorialPanel.SetActive(false);
+        
         mouseObject.SetActive(true);
     }
      
@@ -91,11 +90,16 @@ public class GameManager : MonoBehaviour
 
     void UnlockNewLevel()
     {
+        Debug.Log("UNLOCKING LEVEL");
+        int reachedIndex = PlayerPrefs.GetInt("ReachedIndex");
+        Debug.Log(reachedIndex);
         if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
         {
+            Debug.Log("LEVEL START UNLOCK");
             PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
-            PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 1) + 1);
+            PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel") + 1);
             PlayerPrefs.Save();
+            Debug.Log("LEVEL FINISHED UNLOCK");
         }
     }
 

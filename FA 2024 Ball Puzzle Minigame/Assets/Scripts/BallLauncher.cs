@@ -11,13 +11,19 @@ public class BallLauncher : MonoBehaviour
     public Transform ballSpawnPoint;
     public int maxAvailibleBalls;
     public int availibleBalls;
+    public Color ballColor;
     public List<GameObject> ballsInPlay;
     public Vector3 launchDirection;
     public TextMeshProUGUI ballsLeftText;
     public AudioClip ballLaunchClip;
+    public GameObject ballLaunchParticleSystem;
+    
+    
+    
     public float volume;
     public static BallLauncher Instance;
-
+    public bool isLaunchedBySwitch;
+    public SpriteRenderer spriteRenderer;
     private void Awake()
     {
         Instance = this;
@@ -27,26 +33,29 @@ public class BallLauncher : MonoBehaviour
     {
         ballsLeftText.SetText(availibleBalls.ToString());
         availibleBalls = maxAvailibleBalls;
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        
+
+
     }
     void Update()
     {
         
-        
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (!isLaunchedBySwitch)
         {
-            
-            if (availibleBalls > 0)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
-                LaunchBall();
-            }   
-        }
 
-        if (Input.GetKeyDown(KeyCode.W)) 
-        {
-
-            ClearField();
-           
+                if (availibleBalls > 0)
+                {
+                    LaunchBall();
+                }
+            }
         }
+        
+
+        
 
     }
     void LaunchBall()
@@ -59,12 +68,18 @@ public class BallLauncher : MonoBehaviour
         }
         GameManager.Instance.TurnLaunchStateOff();
         SoundFXManager.Instance.PlaySoundFXClip(ballLaunchClip, transform, volume);
-        GameObject newBall = Instantiate(ballPrefab, ballSpawnPoint.position, transform.rotation);
-        newBall.GetComponent<Rigidbody2D>().AddForce(launchDirection * 150); 
+        ParticleSystem.MainModule main = ballLaunchParticleSystem.GetComponent<ParticleSystem>().main;
+        main.startColor = spriteRenderer.color;
+        var particles = Instantiate(ballLaunchParticleSystem, ballSpawnPoint.transform.position, ballSpawnPoint.rotation);
+        GameObject newBall = Instantiate(ballPrefab, ballSpawnPoint.position, Quaternion.identity);
+        newBall.GetComponent<Rigidbody2D>().AddForce(launchDirection * launchSpeed);
+        newBall.GetComponent<SpriteRenderer>().color = ballColor;
         ballsInPlay.Add(newBall);
         availibleBalls -= 1;
         ballsLeftText.SetText(availibleBalls.ToString());
+        
         Debug.Log("Ball Launched /n Balls Remaining: " + availibleBalls);
+        Destroy(particles, 0.5f);
         
     }
 

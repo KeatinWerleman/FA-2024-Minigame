@@ -17,43 +17,45 @@ public class Switch : MonoBehaviour
     public quaternion tempRotation;
     public SpriteRenderer spriteRenderer;
     public Collider2D switchCollider;
+    public GameObject switchHitParticleSystem;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         switchCollider = GetComponent<Collider2D>();
+        
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
      {
         if (!switchCollider.isTrigger)
         {
-            if (collision.gameObject.tag == "Ball")
+            if (affectedObject != null)
             {
-                if (spriteRenderer.flipX == false)
+                if (collision.gameObject.tag == "Ball")
                 {
-                    spriteRenderer.flipX = true;
-                }
-                else if (spriteRenderer.flipX == true)
-                {
-                    spriteRenderer.flipX = false;
-                }
-                SoundFXManager.Instance.PlaySoundFXClip(switchHitClip, transform, volume);
-                tempPosition = affectedObject.transform.position;
-                tempRotation = affectedObject.transform.rotation;
-                affectedObject.transform.position = objectLocationSprite.transform.position;
-                affectedObject.transform.rotation = objectLocationSprite.transform.rotation;
-                objectLocationSprite.transform.position = tempPosition;
-                objectLocationSprite.transform.rotation = tempRotation;
-                if (isThisMirror == false)
-                {
-                    Destroy(collision.gameObject);
-                }
-                else
-                {
-                    return;
+                    SoundFXManager.Instance.PlaySoundFXClip(switchHitClip, transform, volume);
+                    ParticleSystem.MainModule main = switchHitParticleSystem.GetComponent<ParticleSystem>().main;
+                    main.startColor = spriteRenderer.color;
+                    var particles = Instantiate(switchHitParticleSystem, transform.position, Quaternion.identity);
+                    tempPosition = affectedObject.transform.position;
+                    tempRotation = affectedObject.transform.rotation;
+                    affectedObject.transform.position = objectLocationSprite.transform.position;
+                    affectedObject.transform.rotation = objectLocationSprite.transform.rotation;
+                    objectLocationSprite.transform.position = tempPosition;
+                    objectLocationSprite.transform.rotation = tempRotation;
+                    Destroy(particles, 0.5f);
+                    if (isThisMirror == false)
+                    {
+                        Destroy(collision.gameObject);
+                    }
+                    else
+                    {
+                        return;
+                    }
                 }
             }
+            
 
          }
      }
@@ -61,25 +63,22 @@ public class Switch : MonoBehaviour
     {
         if (switchCollider.isTrigger)
         {
-            if (collision.gameObject.tag == "Ball")
+            if (affectedObject != null)
             {
-                if (spriteRenderer.flipX == false)
+                if (collision.gameObject.tag == "Ball")
                 {
-                    spriteRenderer.flipX = true;
-                }
-                else if (spriteRenderer.flipX == true)
-                {
-                    spriteRenderer.flipX = false;
-                }
-                SoundFXManager.Instance.PlaySoundFXClip(switchHitClip, transform, volume);
-                tempPosition = affectedObject.transform.position;
-                tempRotation = affectedObject.transform.rotation;
-                affectedObject.transform.position = objectLocationSprite.transform.position;
-                affectedObject.transform.rotation = objectLocationSprite.transform.rotation;
-                objectLocationSprite.transform.position = tempPosition;
-                objectLocationSprite.transform.rotation = tempRotation;
+                    SoundFXManager.Instance.PlaySoundFXClip(switchHitClip, transform, volume);
+                    tempPosition = affectedObject.transform.position;
+                    tempRotation = affectedObject.transform.rotation;
+                    affectedObject.transform.position = objectLocationSprite.transform.position;
+                    affectedObject.transform.rotation = objectLocationSprite.transform.rotation;
+                    objectLocationSprite.transform.position = tempPosition;
+                    objectLocationSprite.transform.rotation = tempRotation;
+                    Destroy(switchHitParticleSystem.gameObject, 0.5f);
 
+                }
             }
+            
         }
         
     }

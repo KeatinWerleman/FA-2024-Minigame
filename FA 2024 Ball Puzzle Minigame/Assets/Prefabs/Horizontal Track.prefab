@@ -178,7 +178,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4485288543929297461}
   - component: {fileID: 991983887555091140}
-  - component: {fileID: 4739992807055414551}
   m_Layer: 0
   m_Name: Horizontal Track
   m_TagString: Untagged
@@ -220,23 +219,6 @@ MonoBehaviour:
   upperEndpoint: {fileID: 6997670767657882016}
   objectOnTrack: {fileID: 0}
   trackConnector: {fileID: 6588278705766314319}
---- !u!114 &4739992807055414551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5367695413134485484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d1197baac2798f49b057c22b81c544a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lowerEndpoint: {fileID: 8899850585989920254}
-  upperEndpoint: {fileID: 6997670767657882016}
-  objectOnTrack: {fileID: 0}
-  trackConnector: {fileID: 6588278705766314319}
-  trackScale: 5
 --- !u!1 &6588278705766314319
 GameObject:
   m_ObjectHideFlags: 0
