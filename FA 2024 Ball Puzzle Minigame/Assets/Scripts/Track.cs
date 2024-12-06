@@ -9,7 +9,7 @@ public class Track : MonoBehaviour
     public Transform upperEndpoint;
     public GameObject objectOnTrack;
     public GameObject trackConnector;
-    bool isObjectThere = true;
+    public bool isObjectThere = true;
     
     
     public void Start()
@@ -19,16 +19,22 @@ public class Track : MonoBehaviour
     }
     public void Update()
     {
-        if (isObjectThere)
-        {
-            CheckIfObjectIsOnTrack();
-        }
-        
+        CheckIfObjectIsOnTrack();
+        CheckIfObjectIsDestroyed();
+
+
     }
 
+    public void CheckIfObjectIsDestroyed()
+    {
+        if (objectOnTrack == null)
+        {
+            isObjectThere = false;
+        }
+    }
    public void CheckIfObjectIsOnTrack()
     {
-        if (objectOnTrack != null)
+        if (isObjectThere)
         {
             if (lowerEndpoint.localPosition.y == upperEndpoint.transform.localPosition.y)
             {
@@ -40,7 +46,7 @@ public class Track : MonoBehaviour
                 }
             }
 
-            if (lowerEndpoint.localPosition.x == upperEndpoint.transform.localPosition.x)
+            else if (lowerEndpoint.localPosition.x == upperEndpoint.transform.localPosition.x)
             {
                 if (objectOnTrack.transform.localPosition.x != lowerEndpoint.transform.localPosition.x ||
                     objectOnTrack.transform.localPosition.y < lowerEndpoint.transform.localPosition.y ||
@@ -49,11 +55,6 @@ public class Track : MonoBehaviour
                     objectOnTrack.transform.localPosition = new Vector3(upperEndpoint.localPosition.x, (Mathf.Round(upperEndpoint.localPosition.y + lowerEndpoint.localPosition.y) / 2), 0f);
                 }
             }
-        }
-
-        if (objectOnTrack = null)
-        {
-            isObjectThere = false;
         }
        
     }

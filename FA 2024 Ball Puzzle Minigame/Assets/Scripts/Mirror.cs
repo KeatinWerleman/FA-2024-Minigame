@@ -52,7 +52,7 @@ public class Mirror : MonoBehaviour
             collision.transform.position = new Vector3(Mathf.RoundToInt(collision.transform.position.x), Mathf.RoundToInt(collision.transform.position.y), 0f);
             Debug.Log("ROUNDED POS" + collision.gameObject.transform.position);
             SoundFXManager.Instance.PlaySoundFXClip(ballBounceSound, transform, volume);
-            Destroy(particles);
+            Destroy(particles, 0.5f);
 
         }
 

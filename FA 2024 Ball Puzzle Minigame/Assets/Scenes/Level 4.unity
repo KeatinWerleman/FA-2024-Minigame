@@ -468,7 +468,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 834238873654e6d4389acf5b6f00213c, type: 3}
-  m_Color: {r: 0.73333335, g: 0.19215688, b: 0.098039225, a: 1}
+  m_Color: {r: 0.67058825, g: 0.20392159, b: 0.10980393, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -490,7 +490,6 @@ GameObject:
   - component: {fileID: 135029867}
   - component: {fileID: 135029866}
   - component: {fileID: 135029865}
-  - component: {fileID: 135029864}
   m_Layer: 0
   m_Name: Wall (6)
   m_TagString: Wall
@@ -498,18 +497,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &135029864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 135029863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c31eaf9462024a85913eb472a6cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &135029865
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -940,7 +927,6 @@ GameObject:
   - component: {fileID: 368707274}
   - component: {fileID: 368707273}
   - component: {fileID: 368707272}
-  - component: {fileID: 368707271}
   m_Layer: 0
   m_Name: Wall (10)
   m_TagString: Wall
@@ -948,18 +934,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &368707271
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368707270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c31eaf9462024a85913eb472a6cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &368707272
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1908,7 +1882,6 @@ GameObject:
   - component: {fileID: 647129049}
   - component: {fileID: 647129048}
   - component: {fileID: 647129047}
-  - component: {fileID: 647129046}
   m_Layer: 0
   m_Name: Wall (4)
   m_TagString: Wall
@@ -1916,18 +1889,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &647129046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 647129045}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c31eaf9462024a85913eb472a6cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &647129047
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2237,7 +2198,6 @@ GameObject:
   - component: {fileID: 762538988}
   - component: {fileID: 762538987}
   - component: {fileID: 762538986}
-  - component: {fileID: 762538985}
   m_Layer: 0
   m_Name: Wall (5)
   m_TagString: Wall
@@ -2245,18 +2205,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &762538985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 762538984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c31eaf9462024a85913eb472a6cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &762538986
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2574,7 +2522,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.9254902, g: 0.101960786, b: 0.047058824, a: 0.39215687}
+  m_Color: {r: 0.9254902, g: 0.101960786, b: 0.047058824, a: 0.23529412}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2610,19 +2558,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 814970368903188019, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.b
-      value: 0.21960786
+      value: 0.4560164
       objectReference: {fileID: 0}
     - target: {fileID: 814970368903188019, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.g
-      value: 0.21176472
+      value: 0.44382343
       objectReference: {fileID: 0}
     - target: {fileID: 814970368903188019, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.r
-      value: 0.25882354
+      value: 0.5169811
       objectReference: {fileID: 0}
     - target: {fileID: 1317174970210500821, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511046897775634536, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 1511046897775634536, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4279771492123291134, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2674,27 +2630,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5660324717747087346, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.b
-      value: 0.21960786
+      value: 0.4560164
       objectReference: {fileID: 0}
     - target: {fileID: 5660324717747087346, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.g
-      value: 0.21176472
+      value: 0.44382343
       objectReference: {fileID: 0}
     - target: {fileID: 5660324717747087346, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.r
-      value: 0.25882354
+      value: 0.5169811
       objectReference: {fileID: 0}
     - target: {fileID: 6440628415044944195, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.b
-      value: 0.21960786
+      value: 0.4560164
       objectReference: {fileID: 0}
     - target: {fileID: 6440628415044944195, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.g
-      value: 0.21176472
+      value: 0.44382343
       objectReference: {fileID: 0}
     - target: {fileID: 6440628415044944195, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.r
-      value: 0.25882354
+      value: 0.5169811
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2981,15 +2937,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
       propertyPath: ballColor.b
-      value: 1
+      value: 0.51310074
       objectReference: {fileID: 0}
     - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
       propertyPath: ballColor.g
-      value: 1
+      value: 0.5746854
       objectReference: {fileID: 0}
     - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
       propertyPath: ballColor.r
-      value: 1
+      value: 0.7660377
       objectReference: {fileID: 0}
     - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
       propertyPath: launchSpeed
@@ -3169,7 +3125,6 @@ GameObject:
   - component: {fileID: 1287635194}
   - component: {fileID: 1287635193}
   - component: {fileID: 1287635192}
-  - component: {fileID: 1287635191}
   m_Layer: 0
   m_Name: Wall (9)
   m_TagString: Wall
@@ -3177,18 +3132,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1287635191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1287635190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c31eaf9462024a85913eb472a6cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1287635192
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3977,6 +3920,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1240318883}
     m_Modifications:
+    - target: {fileID: 1684336553427076355, guid: d7e7fd1bbf3bc5e47a9344b3d3b75203, type: 3}
+      propertyPath: hitCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1684336553427076355, guid: d7e7fd1bbf3bc5e47a9344b3d3b75203, type: 3}
+      propertyPath: maxHitCount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2676116403972980129, guid: d7e7fd1bbf3bc5e47a9344b3d3b75203, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 5
@@ -4778,7 +4729,6 @@ GameObject:
   - component: {fileID: 2103469411}
   - component: {fileID: 2103469410}
   - component: {fileID: 2103469409}
-  - component: {fileID: 2103469408}
   m_Layer: 0
   m_Name: Wall (7)
   m_TagString: Wall
@@ -4786,18 +4736,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2103469408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103469407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c31eaf9462024a85913eb472a6cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &2103469409
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4949,7 +4887,6 @@ GameObject:
   - component: {fileID: 2121854164}
   - component: {fileID: 2121854163}
   - component: {fileID: 2121854162}
-  - component: {fileID: 2121854166}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Wall
@@ -5096,18 +5033,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 25192325}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &2121854166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121854161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c31eaf9462024a85913eb472a6cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &346830961801856972
 PrefabInstance:
   m_ObjectHideFlags: 0

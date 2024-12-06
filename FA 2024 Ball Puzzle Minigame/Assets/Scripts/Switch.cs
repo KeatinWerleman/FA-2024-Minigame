@@ -45,6 +45,7 @@ public class Switch : MonoBehaviour
                     objectLocationSprite.transform.position = tempPosition;
                     objectLocationSprite.transform.rotation = tempRotation;
                     Destroy(particles, 0.5f);
+                    GameManager.Instance.TurnLaunchStateOn();
                     if (isThisMirror == false)
                     {
                         Destroy(collision.gameObject);

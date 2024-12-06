@@ -244,7 +244,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.6886792, g: 0.126691, b: 0.126691, a: 0.54901963}
+  m_Color: {r: 0.6886792, g: 0.126691, b: 0.126691, a: 0.23529412}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -974,7 +974,6 @@ GameObject:
   - component: {fileID: 633545461}
   - component: {fileID: 633545460}
   - component: {fileID: 633545459}
-  - component: {fileID: 633545458}
   m_Layer: 0
   m_Name: Wall (7)
   m_TagString: Wall
@@ -982,18 +981,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &633545458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 633545457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c31eaf9462024a85913eb472a6cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &633545459
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1259,7 +1246,6 @@ GameObject:
   - component: {fileID: 809733668}
   - component: {fileID: 809733667}
   - component: {fileID: 809733666}
-  - component: {fileID: 809733665}
   m_Layer: 0
   m_Name: Wall (5)
   m_TagString: Wall
@@ -1267,18 +1253,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &809733665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809733664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c31eaf9462024a85913eb472a6cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &809733666
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1430,7 +1404,6 @@ GameObject:
   - component: {fileID: 837030649}
   - component: {fileID: 837030648}
   - component: {fileID: 837030647}
-  - component: {fileID: 837030646}
   m_Layer: 0
   m_Name: Wall (4)
   m_TagString: Wall
@@ -1438,18 +1411,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &837030646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837030645}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c31eaf9462024a85913eb472a6cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &837030647
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1852,15 +1813,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
       propertyPath: ballColor.b
-      value: 0.9750416
+      value: 0.690566
       objectReference: {fileID: 0}
     - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
       propertyPath: ballColor.g
-      value: 1
+      value: 0.27699116
       objectReference: {fileID: 0}
     - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
       propertyPath: ballColor.r
-      value: 0
+      value: 0.07687427
       objectReference: {fileID: 0}
     - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
       propertyPath: launchDirection.x
@@ -2930,7 +2891,6 @@ GameObject:
   - component: {fileID: 1737057649}
   - component: {fileID: 1737057648}
   - component: {fileID: 1737057647}
-  - component: {fileID: 1737057646}
   m_Layer: 0
   m_Name: Wall (9)
   m_TagString: Wall
@@ -2953,18 +2913,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 640983016}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &1737057646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1737057644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c31eaf9462024a85913eb472a6cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1737057647
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3384,19 +3332,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 814970368903188019, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.b
-      value: 0.015686275
+      value: 0.5407262
       objectReference: {fileID: 0}
     - target: {fileID: 814970368903188019, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.g
-      value: 0.015686275
+      value: 0.5407262
       objectReference: {fileID: 0}
     - target: {fileID: 814970368903188019, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.r
-      value: 0.054901965
+      value: 0.690566
       objectReference: {fileID: 0}
     - target: {fileID: 1317174970210500821, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511046897775634536, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 1511046897775634536, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4279771492123291134, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3448,27 +3404,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5660324717747087346, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.b
-      value: 0.015686275
+      value: 0.5407262
       objectReference: {fileID: 0}
     - target: {fileID: 5660324717747087346, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.g
-      value: 0.015686275
+      value: 0.5407262
       objectReference: {fileID: 0}
     - target: {fileID: 5660324717747087346, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.r
-      value: 0.054901965
+      value: 0.690566
       objectReference: {fileID: 0}
     - target: {fileID: 6440628415044944195, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.b
-      value: 0.015686275
+      value: 0.5407262
       objectReference: {fileID: 0}
     - target: {fileID: 6440628415044944195, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.g
-      value: 0.015686275
+      value: 0.5407262
       objectReference: {fileID: 0}
     - target: {fileID: 6440628415044944195, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_Color.r
-      value: 0.054901965
+      value: 0.690566
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3697,7 +3653,6 @@ GameObject:
   - component: {fileID: 1885774462}
   - component: {fileID: 1885774461}
   - component: {fileID: 1885774460}
-  - component: {fileID: 1885774459}
   m_Layer: 0
   m_Name: Wall (6)
   m_TagString: Wall
@@ -3705,18 +3660,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1885774459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1885774458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c31eaf9462024a85913eb472a6cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1885774460
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4133,7 +4076,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1fb7afea51495d340ae36aacea8b0196, type: 3}
-  m_Color: {r: 0.5254902, g: 0.14509805, b: 0.3137255, a: 1}
+  m_Color: {r: 0.3529412, g: 0.15294118, b: 0.38823533, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4155,7 +4098,6 @@ GameObject:
   - component: {fileID: 2121854164}
   - component: {fileID: 2121854163}
   - component: {fileID: 2121854162}
-  - component: {fileID: 2121854166}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Wall
@@ -4302,18 +4244,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 640983016}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
---- !u!114 &2121854166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121854161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c31eaf9462024a85913eb472a6cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2130480989
 GameObject:
   m_ObjectHideFlags: 0
@@ -4545,7 +4475,6 @@ GameObject:
   - component: {fileID: 2145708611}
   - component: {fileID: 2145708610}
   - component: {fileID: 2145708609}
-  - component: {fileID: 2145708608}
   m_Layer: 0
   m_Name: Wall (8)
   m_TagString: Wall
@@ -4553,18 +4482,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2145708608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2145708607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c31eaf9462024a85913eb472a6cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &2145708609
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4776,6 +4693,10 @@ PrefabInstance:
       propertyPath: objectLocationSprite
       value: 
       objectReference: {fileID: 232389824}
+    - target: {fileID: 6357044381668775604, guid: 0a73b627f9eb2dd44a7f571d5b09c2ae, type: 3}
+      propertyPath: switchHitParticleSystem
+      value: 
+      objectReference: {fileID: 3530538991022913697, guid: 5437c06635d0b8640b927682be55ba37, type: 3}
     - target: {fileID: 7066974697740522732, guid: 0a73b627f9eb2dd44a7f571d5b09c2ae, type: 3}
       propertyPath: cullingMode
       value: 0

@@ -21,6 +21,7 @@ public class WinBlock : MonoBehaviour
             Destroy(this.gameObject);
             SoundFXManager.Instance.PlaySoundFXClip(targetHitClip, transform, volume);
             Destroy(particles, 0.5f);
+            GameManager.Instance.TurnLaunchStateOn();
             
 
         }
