@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2581369823497730723}
   - component: {fileID: 7158729865876621234}
   - component: {fileID: 9026234707008797357}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hit Count
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -199,7 +199,7 @@ GameObject:
   - component: {fileID: 498107048291274240}
   - component: {fileID: 7805145728392172301}
   - component: {fileID: 816997385113855151}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bottom Right Mirror
   m_TagString: Mirror
   m_Icon: {fileID: 0}

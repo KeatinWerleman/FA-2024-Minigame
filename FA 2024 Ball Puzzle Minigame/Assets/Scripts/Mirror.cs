@@ -42,19 +42,24 @@ public class Mirror : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ball")
+        if (collision.gameObject.tag == "Ball" || collision.gameObject.tag == "Special Ball")
         {
             hitCount--;
+            if (collision.gameObject.tag == "Special Ball")
+            {
+                hitCount--;
+            }
             hitCountText.SetText(hitCount.ToString());
             var particles = Instantiate(mirrorHitParticleSystem, transform.position, Quaternion.identity);
-            
             Debug.Log(collision.gameObject.transform.position);
             collision.transform.position = new Vector3(Mathf.RoundToInt(collision.transform.position.x), Mathf.RoundToInt(collision.transform.position.y), 0f);
             Debug.Log("ROUNDED POS" + collision.gameObject.transform.position);
             SoundFXManager.Instance.PlaySoundFXClip(ballBounceSound, transform, volume);
             Destroy(particles, 0.5f);
-
         }
+        
+
+        
 
         if (hitCount <= 0)
         {

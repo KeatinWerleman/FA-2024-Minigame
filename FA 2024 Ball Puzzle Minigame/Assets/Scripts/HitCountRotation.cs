@@ -18,10 +18,11 @@ public class HitCountRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float myTargetRotationZ = -parentMirrorTransform.transform.rotation.z; //get the X rotation from anotherObject
-        float myTargetRotationY = transform.rotation.y; //get the Y rotation from this object
-        float myTargetRotationX = transform.rotation.x; //get the Z rotation from this object
+        float myTargetRotationZ = -(parentMirrorTransform.transform.rotation.z); //get the X rotation from anotherObject
+        float myTargetRotationY = rectTransform.rotation.y; //get the Y rotation from this object
+        float myTargetRotationX = rectTransform.rotation.x; //get the Z rotation from this object
         Vector3 myEulerAngleRotation = new Vector3(myTargetRotationX, myTargetRotationY, myTargetRotationZ);
-        transform.rotation = Quaternion.Euler(myEulerAngleRotation);
+        rectTransform.rotation = Quaternion.Euler(myEulerAngleRotation);
+        
     }
 }

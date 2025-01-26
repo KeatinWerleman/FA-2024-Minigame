@@ -12,16 +12,18 @@ TagManager:
   - Switch
   - Launcher
   - Location Sprite
+  - Button Group A
+  - Special Ball
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Ball
   - Water
   - UI
   - Mirror Text
-  - 
-  - 
+  - Tube
+  - Mirror
   - 
   - 
   - 

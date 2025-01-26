@@ -20,21 +20,15 @@ public class Track : MonoBehaviour
     public void Update()
     {
         CheckIfObjectIsOnTrack();
-        CheckIfObjectIsDestroyed();
+        
 
 
     }
 
-    public void CheckIfObjectIsDestroyed()
-    {
-        if (objectOnTrack == null)
-        {
-            isObjectThere = false;
-        }
-    }
+    
    public void CheckIfObjectIsOnTrack()
     {
-        if (isObjectThere)
+        if (objectOnTrack != null)
         {
             if (lowerEndpoint.localPosition.y == upperEndpoint.transform.localPosition.y)
             {

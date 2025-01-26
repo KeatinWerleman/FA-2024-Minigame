@@ -24,7 +24,6 @@ public class MainMenu: MonoBehaviour
         howToPlayScreen.transform.localScale = Vector3.one;
     }
 
-
     public void ReloadCurrentScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public bool canWeMoveMirrors = true;
     public bool isLevelWon = false;
     public GameObject levelWinPanel;
-    public Button stopLaunchingButton;
+    
     
 
     private void Awake()
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
         {
             mouseObject.SetActive(false);
             canWeMoveMirrors = false;
-            stopLaunchingButton.interactable = true;
+            
         }
     }
 
@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
             BallLauncher.Instance.ClearField();
             mouseObject.SetActive(true);
             canWeMoveMirrors = true;
-            stopLaunchingButton.interactable = false;
+            
 
         }
 
@@ -102,6 +102,8 @@ public class GameManager : MonoBehaviour
             Debug.Log("LEVEL FINISHED UNLOCK");
         }
     }
+
+
 
 
 }

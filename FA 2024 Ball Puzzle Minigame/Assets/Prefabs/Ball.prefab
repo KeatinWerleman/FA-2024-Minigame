@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8123171784537060339}
   - component: {fileID: 4379240309761181959}
   - component: {fileID: 6693990023616680037}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ball
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -260,5 +260,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballSpeed: 5
   ballDirection: {x: 0, y: 0}
-  winTag: 
-  particleExplosion: {fileID: 3530538991022913697, guid: 9e475e4e1df880240aa8e086f7299e68, type: 3}
+  winTag: Target
+  ballRigidbody: {fileID: 0}
+  ballCollider: {fileID: 0}
