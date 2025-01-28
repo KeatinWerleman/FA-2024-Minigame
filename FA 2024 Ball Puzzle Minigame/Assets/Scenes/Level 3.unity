@@ -156,8 +156,6 @@ MonoBehaviour:
   canWeMoveMirrors: 1
   isLevelWon: 0
   levelWinPanel: {fileID: 1815629893}
-  stopLaunchingButton: {fileID: 0}
-  launchButton: {fileID: 0}
 --- !u!4 &52896405
 Transform:
   m_ObjectHideFlags: 0
@@ -1802,6 +1800,10 @@ PrefabInstance:
       value: 0.07687427
       objectReference: {fileID: 0}
     - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
+      propertyPath: tubeTriggerZone
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
       propertyPath: launchDirection.x
       value: 2
       objectReference: {fileID: 0}
@@ -1809,6 +1811,14 @@ PrefabInstance:
       propertyPath: maxAvailibleBalls
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
+      propertyPath: launchDirectionA.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
+      propertyPath: specialBallLaunchButtonText
+      value: 
+      objectReference: {fileID: 1189687800}
     - target: {fileID: 6716113665357052328, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.7071068
@@ -1945,6 +1955,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1189687800 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4148273990284787786, guid: afe6f1dbe2daeb4429e0b75982020883, type: 3}
+  m_PrefabInstance: {fileID: 1389310439}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1263055124
 GameObject:
   m_ObjectHideFlags: 0

@@ -32,6 +32,8 @@ public class BallLauncher : MonoBehaviour
     public static BallLauncher Instance;
     public bool isLaunchedBySwitch;
     public SpriteRenderer spriteRenderer;
+    public GameObject tubeTriggerZone;
+    
     private void Awake()
     {
         Instance = this;
@@ -85,6 +87,7 @@ public class BallLauncher : MonoBehaviour
         {
             Destroy(ballsInPlay[0]);
             ballsInPlay.RemoveAt(0);
+            tubeTriggerZone.GetComponent<TubeTriggerZone>().isBallInTube = false;
         }
         if (availibleBalls > 0)
         {
