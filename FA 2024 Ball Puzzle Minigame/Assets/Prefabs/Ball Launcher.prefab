@@ -411,20 +411,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 1422201317966632920, guid: 1ed2f4a72054c064589ffed563e607bc, type: 3}
+  specialBallPrefab: {fileID: 1422201317966632920, guid: a84f4582bb071ee47a237dab0f6cccc1, type: 3}
+  specialBallCount: 0
+  specialBallLaunchButtonText: {fileID: 0}
   launchSpeed: 0.3
   ballSpawnPoint: {fileID: 6716113665357052328}
   maxAvailibleBalls: 5
   availibleBalls: 5
   ballColor: {r: 1, g: 1, b: 1, a: 1}
   ballsInPlay: []
-  launchDirection: {x: 1, y: 0, z: 0}
-  launchDirectionA: {x: 0, y: 0, z: 0}
-  launchDirectionB: {x: 0, y: 0, z: 0}
+  launchDirection: {x: 1, y: 0}
+  launchDirectionA: {x: 0, y: 0}
+  launchDirectionB: {x: 0, y: 0}
   isInOriginalLocation: 0
   ballsLeftText: {fileID: 705611823577446796}
   ballLaunchClip: {fileID: 8300000, guid: 4d036c43a4df8584eb0ed902116acf5b, type: 3}
   ballLaunchParticleSystem: {fileID: 3530538991022913697, guid: cfd5016f6a4ac7f4c9ed9929b056dcc5, type: 3}
-  launchButton: {fileID: 0}
   volume: 0.2
   isLaunchedBySwitch: 0
   spriteRenderer: {fileID: 2964395364375643514}
