@@ -156,6 +156,7 @@ MonoBehaviour:
   canWeMoveMirrors: 1
   isLevelWon: 0
   levelWinPanel: {fileID: 1815629893}
+  pauseMenu: {fileID: 0}
 --- !u!4 &52896405
 Transform:
   m_ObjectHideFlags: 0
@@ -3530,7 +3531,6 @@ GameObject:
   - component: {fileID: 1832059902}
   - component: {fileID: 1832059901}
   - component: {fileID: 1832059900}
-  - component: {fileID: 1832059899}
   m_Layer: 0
   m_Name: Moving Wall
   m_TagString: Wall
@@ -3538,18 +3538,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1832059899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832059898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c31eaf9462024a85913eb472a6cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1832059900
 BoxCollider2D:
   m_ObjectHideFlags: 0

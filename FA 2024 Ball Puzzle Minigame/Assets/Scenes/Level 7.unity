@@ -156,8 +156,7 @@ MonoBehaviour:
   canWeMoveMirrors: 1
   isLevelWon: 0
   levelWinPanel: {fileID: 1894624463}
-  stopLaunchingButton: {fileID: 0}
-  launchButton: {fileID: 0}
+  pauseMenu: {fileID: 0}
 --- !u!4 &52896405
 Transform:
   m_ObjectHideFlags: 0
@@ -1438,7 +1437,7 @@ MonoBehaviour:
   affectedObject: {fileID: 1832059898}
   objectLocationSprite: {fileID: 232389824}
   isSwitchActive: 0
-  isThisMirror: 0
+  isSpecialSwitch: 0
   switchHitClip: {fileID: 8300000, guid: c604a3e75fe5ed14e9fc0aaa2c078ac2, type: 3}
   volume: 0.2
   tempPosition: {x: 0, y: 0, z: 0}
@@ -1451,6 +1450,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   switchCollider: {fileID: 0}
   switchHitParticleSystem: {fileID: 3530538991022913697, guid: 5437c06635d0b8640b927682be55ba37, type: 3}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
+  hitColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!212 &654963912
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3044,6 +3045,10 @@ PrefabInstance:
       propertyPath: launchDirection.x
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
+      propertyPath: launchDirectionA.x
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8672797016447602104, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5
@@ -3134,7 +3139,7 @@ MonoBehaviour:
   affectedObject: {fileID: 773070096}
   objectLocationSprite: {fileID: 2061591329}
   isSwitchActive: 0
-  isThisMirror: 0
+  isSpecialSwitch: 0
   switchHitClip: {fileID: 8300000, guid: c604a3e75fe5ed14e9fc0aaa2c078ac2, type: 3}
   volume: 0.2
   tempPosition: {x: 0, y: 0, z: 0}
@@ -3147,6 +3152,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   switchCollider: {fileID: 0}
   switchHitParticleSystem: {fileID: 3530538991022913697, guid: 5437c06635d0b8640b927682be55ba37, type: 3}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
+  hitColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!212 &1559278919
 SpriteRenderer:
   m_ObjectHideFlags: 0

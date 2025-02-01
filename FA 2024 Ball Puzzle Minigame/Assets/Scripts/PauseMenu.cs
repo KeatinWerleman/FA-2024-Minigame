@@ -9,8 +9,12 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     public void Pause()
     {
-        pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
+        if (pauseMenu.activeSelf == false)
+        {
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        
     }
 
     public void Home()
@@ -20,8 +24,12 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        pauseMenu.SetActive(false);
-        Time.timeScale = 1f;
+        if (!pauseMenu.activeSelf)
+        {
+            pauseMenu.SetActive(false);
+            Time.timeScale = 1f;
+        }
+        
     }
 
     public void Restart()

@@ -156,8 +156,7 @@ MonoBehaviour:
   canWeMoveMirrors: 1
   isLevelWon: 0
   levelWinPanel: {fileID: 926156208}
-  stopLaunchingButton: {fileID: 0}
-  launchButton: {fileID: 0}
+  pauseMenu: {fileID: 0}
 --- !u!4 &52896405
 Transform:
   m_ObjectHideFlags: 0
@@ -1810,7 +1809,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.047058824, g: 0.2784314, b: 0.40392157, a: 0.23529412}
+  m_Color: {r: 0.047058824, g: 0.2784314, b: 0.40392157, a: 0.64705884}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

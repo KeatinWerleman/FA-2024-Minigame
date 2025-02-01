@@ -156,8 +156,7 @@ MonoBehaviour:
   canWeMoveMirrors: 1
   isLevelWon: 0
   levelWinPanel: {fileID: 1355183396}
-  stopLaunchingButton: {fileID: 0}
-  launchButton: {fileID: 0}
+  pauseMenu: {fileID: 0}
 --- !u!4 &52896405
 Transform:
   m_ObjectHideFlags: 0
@@ -963,9 +962,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: c4b0e232c376b844290f32e1d3a66362, type: 3}
-  m_Color: {r: 0.49056602, g: 0.4697401, b: 0.4697401, a: 0.54901963}
+  m_Color: {r: 0.4901961, g: 0.47058827, b: 0.47058827, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4362,6 +4361,10 @@ PrefabInstance:
     - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
       propertyPath: launchDirection.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
+      propertyPath: launchDirectionA.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6716113665357052328, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
       propertyPath: m_LocalPosition.x

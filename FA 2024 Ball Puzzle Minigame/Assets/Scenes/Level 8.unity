@@ -233,8 +233,7 @@ MonoBehaviour:
   canWeMoveMirrors: 1
   isLevelWon: 0
   levelWinPanel: {fileID: 1389241539}
-  stopLaunchingButton: {fileID: 0}
-  launchButton: {fileID: 0}
+  pauseMenu: {fileID: 0}
 --- !u!4 &52896405
 Transform:
   m_ObjectHideFlags: 0
@@ -4765,6 +4764,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
       propertyPath: launchDirection.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
+      propertyPath: launchDirectionA.x
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8672797016447602104, guid: 990933c8a83830c4abe3b863252bf009, type: 3}

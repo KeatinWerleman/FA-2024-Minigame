@@ -230,8 +230,7 @@ MonoBehaviour:
   canWeMoveMirrors: 1
   isLevelWon: 0
   levelWinPanel: {fileID: 969630411}
-  stopLaunchingButton: {fileID: 0}
-  launchButton: {fileID: 0}
+  pauseMenu: {fileID: 0}
 --- !u!4 &52896405
 Transform:
   m_ObjectHideFlags: 0
@@ -750,7 +749,7 @@ MonoBehaviour:
   affectedObject: {fileID: 1637688883}
   objectLocationSprite: {fileID: 2067009189}
   isSwitchActive: 0
-  isThisMirror: 0
+  isSpecialSwitch: 0
   switchHitClip: {fileID: 8300000, guid: c604a3e75fe5ed14e9fc0aaa2c078ac2, type: 3}
   volume: 0.2
   tempPosition: {x: 0, y: 0, z: 0}
@@ -763,6 +762,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   switchCollider: {fileID: 0}
   switchHitParticleSystem: {fileID: 3530538991022913697, guid: 5437c06635d0b8640b927682be55ba37, type: 3}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
+  hitColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!212 &211737847
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3330,6 +3331,10 @@ PrefabInstance:
       propertyPath: maxAvailibleBalls
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
+      propertyPath: launchDirectionA.x
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6716113665357052328, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.7
@@ -4242,7 +4247,6 @@ GameObject:
   - component: {fileID: 1832059902}
   - component: {fileID: 1832059901}
   - component: {fileID: 1832059900}
-  - component: {fileID: 1832059899}
   m_Layer: 0
   m_Name: Moving Wall
   m_TagString: Wall
@@ -4250,18 +4254,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1832059899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832059898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b54c31eaf9462024a85913eb472a6cc3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1832059900
 BoxCollider2D:
   m_ObjectHideFlags: 0
