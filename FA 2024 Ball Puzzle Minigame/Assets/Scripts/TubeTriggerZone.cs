@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TubeTriggerZone : MonoBehaviour
 {
-    public List<Collider2D> collidersAroundTube;
+    public List<Collider2D> cornerColliders;
     public List<Collider2D> mirrors;
     public List<Collider2D> affectedWalls;
     public List<GameObject> triggerZones;
@@ -15,7 +15,7 @@ public class TubeTriggerZone : MonoBehaviour
     void Start()
     {
         
-        foreach (var collider in collidersAroundTube) 
+        foreach (var collider in cornerColliders) 
         { 
             collider.enabled = false;
         }
@@ -68,7 +68,7 @@ public class TubeTriggerZone : MonoBehaviour
     {
         if (!isBallInTube)
         {
-            foreach (var collider in collidersAroundTube)
+            foreach (var collider in cornerColliders)
             {
                 collider.enabled = false;
                 Debug.Log("TUBE COLLIDERS OFF");
@@ -90,7 +90,7 @@ public class TubeTriggerZone : MonoBehaviour
 
         if (isBallInTube)
         {
-            foreach (var collider in collidersAroundTube)
+            foreach (var collider in cornerColliders)
             {
 
                 collider.enabled = true;

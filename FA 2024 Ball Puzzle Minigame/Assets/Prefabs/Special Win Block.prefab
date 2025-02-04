@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4810026728640157799}
   - component: {fileID: 6757631817177047925}
   m_Layer: 0
-  m_Name: Win Block
+  m_Name: Special Win Block
   m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4ede4c53e5f420241adbe853f37c73cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: adbf16c6d42b4744aa8e07507c3b3a9a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -176,4 +176,4 @@ MonoBehaviour:
   volume: 0.2
   winBlockParticleExplosion: {fileID: 3530538991022913697, guid: 9e475e4e1df880240aa8e086f7299e68, type: 3}
   switchWinBlockParticleExplosion: {fileID: 3530538991022913697, guid: 11b71eb99c6c2af4398e7647ae18601d, type: 3}
-  isSpecialWinBlock: 0
+  isSpecialWinBlock: 1
