@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using static Unity.VisualScripting.Member;
 
@@ -23,11 +24,16 @@ public class Mouse : MonoBehaviour
     void Update()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = mousePosition;
 
         if (Input.GetMouseButtonDown(0))
         {
             Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
-
+            
+            if (targetObject == null)
+            {
+                Debug.Log("touched nothing");
+            }
             if (targetObject.tag == "Mirror")
             {
 
@@ -38,6 +44,15 @@ public class Mouse : MonoBehaviour
 
                 offset = selectedObject.transform.position - mousePosition;
             }
+
+            if (targetObject.tag == "Mirror Wall Collider")
+            {
+                Debug.Log("This is a collider");
+                SoundFXManager.Instance.PlaySoundFXClip(pickUpSound, transform, volume);
+                selectedObject = targetObject.transform.parent.gameObject;
+            }
+
+            
 
         }
 

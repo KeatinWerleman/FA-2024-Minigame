@@ -31,14 +31,7 @@ public class Mirror : MonoBehaviour
 
 
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Launcher" || collision.gameObject.tag == "Target" || collision.gameObject.tag == "Switch" || collision.gameObject.tag == "Location Sprite")
-        {
-            Debug.Log("Touched Something Bad");
-            Mouse.Instance.MoveBackToIntital(thisMirror);
-        }
-    }
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

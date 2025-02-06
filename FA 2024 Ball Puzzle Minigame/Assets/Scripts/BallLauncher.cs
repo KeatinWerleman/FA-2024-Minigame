@@ -18,8 +18,7 @@ public class BallLauncher : MonoBehaviour
     public Color ballColor;
     public List<GameObject> ballsInPlay;
     public Vector2 launchDirection;
-    public Vector2 launchDirectionA;
-    public Vector2 launchDirectionB;
+    
     public bool isInOriginalLocation;
     public TextMeshProUGUI ballsLeftText;
     public AudioClip ballLaunchClip;
@@ -41,7 +40,7 @@ public class BallLauncher : MonoBehaviour
 
     private void Start()
     {
-        launchDirection = new Vector2(launchDirectionA.x, launchDirectionA.y) ;
+        
         ballsLeftText.SetText(availibleBalls.ToString());
         availibleBalls = maxAvailibleBalls;
         isInOriginalLocation = true;
@@ -52,23 +51,23 @@ public class BallLauncher : MonoBehaviour
     }
     void Update()
     {
-        if (isInOriginalLocation == false)
-        {
-            launchDirection = new Vector2(launchDirectionB.x, launchDirectionB.y);
-        }
-
-        if (isInOriginalLocation == true)
-        {
-            launchDirection = new Vector2(launchDirectionA.x, launchDirectionA.y);
-        }
+        
         if (!isLaunchedBySwitch)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.W))
             {
 
                 if (availibleBalls > 0)
                 {
                     LaunchBall();
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (availibleBalls > 0 && specialBallCount >0)
+                {
+                    LaunchSpecialBall();
                 }
             }
         }
@@ -87,7 +86,11 @@ public class BallLauncher : MonoBehaviour
         {
             Destroy(ballsInPlay[0]);
             ballsInPlay.RemoveAt(0);
-            tubeTriggerZone.GetComponent<TubeTriggerZone>().isBallInTube = false;
+            if (tubeTriggerZone != null)
+            {
+                tubeTriggerZone.GetComponent<TubeTriggerZone>().isBallInTube = false;
+
+            }
         }
         if (availibleBalls > 0)
         {

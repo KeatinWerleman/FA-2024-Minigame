@@ -41,10 +41,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W)) 
+        if (Input.GetKeyDown(KeyCode.R)) 
+        {
+            ResetLevel();
+        
+        }
+
+        if (Input.GetMouseButtonDown(1))
         {
             TurnLaunchStateOn();
-        
         }
 
         
@@ -54,6 +59,11 @@ public class GameManager : MonoBehaviour
     {
         
         mouseObject.SetActive(true);
+    }
+
+    public void ResetLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
      
 

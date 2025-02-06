@@ -571,6 +571,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5873801793329141001, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: affectedWalls
+      value: 
+      objectReference: {fileID: 6999898599763880089}
+    - target: {fileID: 5873801793329141001, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
       propertyPath: mirrors.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -595,6 +599,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5873801793329141001, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: cornerColliders.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873801793329141001, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
       propertyPath: triggerZones.Array.data[0]
       value: 
       objectReference: {fileID: 818768030}
@@ -610,6 +618,14 @@ PrefabInstance:
       propertyPath: affectedWalls.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5873801793329141001, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: cornerColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 1368396162}
+    - target: {fileID: 5873801793329141001, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: cornerColliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 1920965283}
     - target: {fileID: 5873801793329141001, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
       propertyPath: collidersAroundTube.Array.size
       value: 5
@@ -986,11 +1002,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 918653703346525117, guid: 99b79f101b9827b418598d6b47412d21, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25000006
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 918653703346525117, guid: 99b79f101b9827b418598d6b47412d21, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.25000006
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 918653703346525117, guid: 99b79f101b9827b418598d6b47412d21, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.63999987
       objectReference: {fileID: 0}
     - target: {fileID: 918653703346525117, guid: 99b79f101b9827b418598d6b47412d21, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1713,6 +1733,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5873801793329141001, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: cornerColliders.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5873801793329141001, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
       propertyPath: triggerZones.Array.data[0]
       value: 
       objectReference: {fileID: 843492797}
@@ -1728,6 +1752,14 @@ PrefabInstance:
       propertyPath: affectedWalls.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5873801793329141001, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: cornerColliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 1368396162}
+    - target: {fileID: 5873801793329141001, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: cornerColliders.Array.data[1]
+      value: 
+      objectReference: {fileID: 1920965283}
     - target: {fileID: 5873801793329141001, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
       propertyPath: collidersAroundTube.Array.size
       value: 5
@@ -3410,11 +3442,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6968337406015917137, guid: 9eb6317e39c06494b8b5eb22ffe85c8a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25000006
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6968337406015917137, guid: 9eb6317e39c06494b8b5eb22ffe85c8a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.25000006
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968337406015917137, guid: 9eb6317e39c06494b8b5eb22ffe85c8a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.63999987
       objectReference: {fileID: 0}
     - target: {fileID: 6968337406015917137, guid: 9eb6317e39c06494b8b5eb22ffe85c8a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3951,6 +3987,11 @@ PrefabInstance:
 --- !u!4 &1920965282 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3576782362615327506, guid: da7a6efb1ba9c414ca41a2757c1db35c, type: 3}
+  m_PrefabInstance: {fileID: 1920965281}
+  m_PrefabAsset: {fileID: 0}
+--- !u!60 &1920965283 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 5211668021005616661, guid: da7a6efb1ba9c414ca41a2757c1db35c, type: 3}
   m_PrefabInstance: {fileID: 1920965281}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1946257768 stripped

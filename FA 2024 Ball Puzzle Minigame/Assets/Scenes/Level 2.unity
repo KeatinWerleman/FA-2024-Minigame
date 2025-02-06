@@ -482,11 +482,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 918653703346525117, guid: 99b79f101b9827b418598d6b47412d21, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25000006
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 918653703346525117, guid: 99b79f101b9827b418598d6b47412d21, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.25000006
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 918653703346525117, guid: 99b79f101b9827b418598d6b47412d21, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.63999987
       objectReference: {fileID: 0}
     - target: {fileID: 918653703346525117, guid: 99b79f101b9827b418598d6b47412d21, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1547,6 +1551,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
+      propertyPath: launchDirectionA.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
       propertyPath: ballLaunchParticleSystem
       value: 
       objectReference: {fileID: 3530538991022913697, guid: cfd5016f6a4ac7f4c9ed9929b056dcc5, type: 3}
@@ -1793,7 +1801,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: After you hit a target, you can move bumpers again. If a ball is stuck
-    in a spot and you want to adjust mirrors, click STOP LAUNCHING.
+    in a spot and you want to adjust the bumpers, press S.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 08107f6a417e3e345880e7b73201b8fc, type: 2}
   m_sharedMaterial: {fileID: 6782481935194132821, guid: 08107f6a417e3e345880e7b73201b8fc, type: 2}
@@ -2099,6 +2107,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 4053718968818864505, guid: e9999df32841f0f44822db6d2f709550, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053718968818864505, guid: e9999df32841f0f44822db6d2f709550, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053718968818864505, guid: e9999df32841f0f44822db6d2f709550, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053718968818864505, guid: e9999df32841f0f44822db6d2f709550, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053718968818864505, guid: e9999df32841f0f44822db6d2f709550, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053718968818864505, guid: e9999df32841f0f44822db6d2f709550, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7805145728392172301, guid: e9999df32841f0f44822db6d2f709550, type: 3}
       propertyPath: hitCount
       value: 1
@@ -2134,11 +2166,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6968337406015917137, guid: 9eb6317e39c06494b8b5eb22ffe85c8a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25000006
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6968337406015917137, guid: 9eb6317e39c06494b8b5eb22ffe85c8a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.25000006
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6968337406015917137, guid: 9eb6317e39c06494b8b5eb22ffe85c8a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.63999987
       objectReference: {fileID: 0}
     - target: {fileID: 6968337406015917137, guid: 9eb6317e39c06494b8b5eb22ffe85c8a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2771,7 +2807,8 @@ PrefabInstance:
       value: LaunchBall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 9176229980993086372, guid: afe6f1dbe2daeb4429e0b75982020883, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: afe6f1dbe2daeb4429e0b75982020883, type: 3}

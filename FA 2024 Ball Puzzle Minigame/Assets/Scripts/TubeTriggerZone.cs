@@ -6,7 +6,7 @@ public class TubeTriggerZone : MonoBehaviour
 {
     public List<Collider2D> cornerColliders;
     public List<Collider2D> mirrors;
-    public List<Collider2D> affectedWalls;
+    public Collider2D affectedWalls;
     public List<GameObject> triggerZones;
     public bool isBallInTube;
 
@@ -74,12 +74,12 @@ public class TubeTriggerZone : MonoBehaviour
                 Debug.Log("TUBE COLLIDERS OFF");
             }
 
-            foreach (var collider in affectedWalls)
-            {
+           
+            
 
-                collider.enabled = true;
+                affectedWalls.enabled = true;
                 Debug.Log("WALL COLLIDERS ON");
-            }
+            
 
             foreach (var collider in mirrors)
             {
@@ -97,11 +97,7 @@ public class TubeTriggerZone : MonoBehaviour
                 Debug.Log("TUBE COLLIDERS ON");
             }
 
-            foreach (var collider in affectedWalls)
-            {
-                collider.enabled = false;
-                Debug.Log("WALL COLLIDERS ON");
-            }
+            affectedWalls.enabled = false;
 
             foreach (var collider in mirrors)
             {

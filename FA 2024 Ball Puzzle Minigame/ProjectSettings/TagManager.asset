@@ -14,6 +14,7 @@ TagManager:
   - Location Sprite
   - Button Group A
   - Special Ball
+  - Mirror Wall Collider
   layers:
   - Default
   - TransparentFX
@@ -24,8 +25,8 @@ TagManager:
   - Mirror Text
   - Tube
   - Mirror
-  - 
-  - 
+  - Mouse
+  - Mirror Wall collider
   - 
   - 
   - 
