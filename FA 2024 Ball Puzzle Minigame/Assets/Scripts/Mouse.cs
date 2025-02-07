@@ -48,8 +48,10 @@ public class Mouse : MonoBehaviour
             if (targetObject.tag == "Mirror Wall Collider")
             {
                 Debug.Log("This is a collider");
-                SoundFXManager.Instance.PlaySoundFXClip(pickUpSound, transform, volume);
                 selectedObject = targetObject.transform.parent.gameObject;
+                SoundFXManager.Instance.PlaySoundFXClip(pickUpSound, transform, volume);
+                offset = selectedObject.transform.position - mousePosition;
+
             }
 
             
