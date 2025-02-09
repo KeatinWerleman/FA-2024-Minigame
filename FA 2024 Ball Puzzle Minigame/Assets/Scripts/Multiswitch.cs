@@ -37,8 +37,18 @@ public class Multiswitch : MonoBehaviour
                     ParticleSystem.MainModule main = switchHitParticleSystem.GetComponent<ParticleSystem>().main;
                     main.startColor = spriteRenderer.color;
                     var particles = Instantiate(switchHitParticleSystem, transform.position, Quaternion.identity);
-                    
-                    Destroy(particles, 0.5f);
+                    if (spriteRenderer.flipX == true)
+                    {
+                        spriteRenderer.flipX = false;
+                    }
+                    else if (spriteRenderer.flipX == false)
+                    {
+                        spriteRenderer.flipX = true;
+                    }
+                
+
+
+                Destroy(particles, 0.5f);
 
                     
                     if (isSwitchActive == true)
@@ -47,14 +57,14 @@ public class Multiswitch : MonoBehaviour
                         Destroy(collision.gameObject);
                     GameManager.Instance.TurnLaunchStateOn();
                     MultiswitchHandler.Instance.CheckIfAllSwitchesAreHit();
-                }
+                    }
                     else if (!isSwitchActive)
                     {
                         isSwitchActive = true;
                         Destroy(collision.gameObject);
                     GameManager.Instance.TurnLaunchStateOn();
                     MultiswitchHandler.Instance.CheckIfAllSwitchesAreHit();
-                }
+                    }
                 
                 }
             
@@ -72,7 +82,14 @@ public class Multiswitch : MonoBehaviour
                 ParticleSystem.MainModule main = switchHitParticleSystem.GetComponent<ParticleSystem>().main;
                 main.startColor = spriteRenderer.color;
                 var particles = Instantiate(switchHitParticleSystem, transform.position, Quaternion.identity);
-                
+                if (spriteRenderer.flipX == true)
+                    {
+                        spriteRenderer.flipX = false;
+                    }
+                    else if (spriteRenderer.flipX == false)
+                    {
+                        spriteRenderer.flipX = true;
+                    }
                 Destroy(particles, 0.5f);
                 
                 if (isSwitchActive)
