@@ -9,8 +9,8 @@ public class TubeTriggerZone : MonoBehaviour
     public Collider2D affectedWalls;
     public List<GameObject> triggerZones;
     public bool isBallInTube;
+    
 
-   
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +20,14 @@ public class TubeTriggerZone : MonoBehaviour
             collider.enabled = false;
         }
 
+        List<GameObject> mirrorObjects = new List<GameObject>();
+        mirrorObjects.AddRange(GameObject.FindGameObjectsWithTag("Mirror"));
+        foreach (var mirrorObject in mirrorObjects)
+        {
+            Collider2D mirrorCollider = mirrorObject.GetComponent<Collider2D>();
+            mirrors.Add(mirrorCollider);
+        }
         
-
        
         
 

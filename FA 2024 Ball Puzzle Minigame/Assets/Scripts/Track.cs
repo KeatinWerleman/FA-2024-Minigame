@@ -36,7 +36,7 @@ public class Track : MonoBehaviour
                     objectOnTrack.transform.localPosition.x < lowerEndpoint.transform.localPosition.x ||
                     objectOnTrack.transform.localPosition.x > upperEndpoint.transform.localPosition.x)
                 {
-                    objectOnTrack.transform.localPosition = new Vector3((Mathf.Round(upperEndpoint.localPosition.x + lowerEndpoint.localPosition.x) / 2), upperEndpoint.localPosition.y, 0f);
+                    objectOnTrack.transform.localPosition = new Vector3(Mathf.Round(upperEndpoint.localPosition.x + lowerEndpoint.localPosition.x) / 2, upperEndpoint.localPosition.y, 0f);
                 }
             }
 
