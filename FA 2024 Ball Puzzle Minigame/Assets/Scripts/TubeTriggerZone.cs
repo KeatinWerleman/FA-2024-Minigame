@@ -52,8 +52,13 @@ public class TubeTriggerZone : MonoBehaviour
                 isBallInTube = false;
                 foreach(var collider in triggerZones)
                 {
-                    gameObject.GetComponent<TubeTriggerZone>().isBallInTube = false;
+                    collider.gameObject.GetComponent<TubeTriggerZone>().isBallInTube = false;
+                    Debug.Log("Ball in Tube");
+
+
+             
                 }
+                collision.gameObject.GetComponent<Ball>().ballSpeed = 5;
             }
 
             else if (isBallInTube == false)
@@ -61,8 +66,9 @@ public class TubeTriggerZone : MonoBehaviour
                 isBallInTube = true;
                 foreach (var collider in triggerZones)
                 {
-                    gameObject.GetComponent<TubeTriggerZone>().isBallInTube = true;
+                    collider.gameObject.GetComponent<TubeTriggerZone>().isBallInTube = true;
                 }
+                collision.gameObject.GetComponent<Ball>().ballSpeed = 10;
             }
             HandleColliders();
 
