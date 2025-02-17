@@ -43,6 +43,7 @@ public class BallLauncher : MonoBehaviour
         
         ballsLeftText.SetText(availibleBalls.ToString());
         availibleBalls = maxAvailibleBalls;
+        specialBallLaunchButtonText.SetText("Launch Special Ball (" + specialBallCount.ToString() + ")");
         isInOriginalLocation = true;
         spriteRenderer = GetComponent<SpriteRenderer>();
         
@@ -135,8 +136,9 @@ public class BallLauncher : MonoBehaviour
             ballsInPlay.Add(newBall);
             availibleBalls -= 1;
             specialBallCount -= 1;
+            specialBallLaunchButtonText.SetText("Launch Special Ball (" + specialBallCount.ToString() + ")");
             ballsLeftText.SetText(availibleBalls.ToString());
-            specialBallLaunchButtonText.SetText("Launch Powerball (" + specialBallCount.ToString() + ")");
+            
             Debug.Log("Ball Launched /n Balls Remaining: " + availibleBalls);
             Destroy(particles, 0.5f);
         }
