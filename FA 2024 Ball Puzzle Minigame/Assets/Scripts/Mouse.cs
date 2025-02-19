@@ -24,6 +24,7 @@ public class Mouse : MonoBehaviour
     void Update()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
         transform.position = mousePosition;
 
         if (Input.GetMouseButtonDown(0))
