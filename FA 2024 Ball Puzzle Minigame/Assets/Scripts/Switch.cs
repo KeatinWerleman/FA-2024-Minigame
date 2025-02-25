@@ -29,7 +29,7 @@ public class Switch : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!switchCollider.isTrigger)
+        if (switchCollider.isTrigger == false)
         {
 
 
@@ -40,6 +40,7 @@ public class Switch : MonoBehaviour
                     if (collision.gameObject.tag == "Special Ball")
                     {
                         {
+
                             SoundFXManager.Instance.PlaySoundFXClip(switchHitClip, transform, volume);
                             ParticleSystem.MainModule main = switchHitParticleSystem.GetComponent<ParticleSystem>().main;
                             main.startColor = spriteRenderer.color;
@@ -51,7 +52,7 @@ public class Switch : MonoBehaviour
                             objectLocationSprite.transform.position = tempPosition;
                             objectLocationSprite.transform.rotation = tempRotation;
                             Destroy(particles, 0.5f);
-
+                            Debug.Log("Special Ball Touched Switch");
                             Destroy(collision.gameObject);
                             GameManager.Instance.TurnLaunchStateOn();
 
@@ -111,11 +112,12 @@ public class Switch : MonoBehaviour
                             affectedObject.transform.rotation = objectLocationSprite.transform.rotation;
                             objectLocationSprite.transform.position = tempPosition;
                             objectLocationSprite.transform.rotation = tempRotation;
+                            Debug.Log("Special Ball Touched Button");
                             Destroy(particles, 0.5f);
 
 
                         }
-                        GameManager.Instance.TurnLaunchStateOn();
+                        
 
 
                     }
@@ -132,19 +134,7 @@ public class Switch : MonoBehaviour
                     affectedObject.transform.rotation = objectLocationSprite.transform.rotation;
                     objectLocationSprite.transform.position = tempPosition;
                     objectLocationSprite.transform.rotation = tempRotation;
-                    if (affectedObject.gameObject.tag == "Ball Launcher")
-                    {
-
-                        if (affectedObject.GetComponent<BallLauncher>().isInOriginalLocation == true)
-                        {
-                            affectedObject.GetComponent<BallLauncher>().isInOriginalLocation = false;
-                        }
-                        else if (affectedObject.GetComponent<BallLauncher>().isInOriginalLocation == false)
-                        {
-                            affectedObject.GetComponent<BallLauncher>().isInOriginalLocation = true;
-                        }
-                        GameManager.Instance.TurnLaunchStateOn();
-                    }
+                    
                     Destroy(switchHitParticleSystem.gameObject, 0.5f);
 
                 }

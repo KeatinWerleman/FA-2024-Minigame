@@ -18,7 +18,6 @@ public class BallLauncher : MonoBehaviour
     public Color ballColor;
     public List<GameObject> ballsInPlay;
     public Vector2 launchDirection;
-    
     public bool isInOriginalLocation;
     public TextMeshProUGUI ballsLeftText;
     public AudioClip ballLaunchClip;
@@ -71,6 +70,11 @@ public class BallLauncher : MonoBehaviour
                     LaunchSpecialBall();
                 }
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            ClearField();
         }
 
         

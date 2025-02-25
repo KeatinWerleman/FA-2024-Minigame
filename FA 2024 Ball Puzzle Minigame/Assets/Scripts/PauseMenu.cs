@@ -6,11 +6,24 @@ public class PauseMenu : MonoBehaviour
 {
 
     [SerializeField] GameObject pauseMenu;
-    [SerializeField]
+    [SerializeField] GameObject levelUI;
+    [SerializeField] private GameObject Mouse;
+
+    private void Start()
+    {
+        Mouse = GameObject.FindGameObjectWithTag("Mouse");
+        levelUI = GameObject.FindGameObjectWithTag("Level UI");
+        
+    }
     public void Pause()
     {
+        
         pauseMenu.SetActive(true);
+        Mouse.SetActive(false);
+        levelUI.SetActive(false);
         Time.timeScale = 0f;
+        
+
     }
 
     public void Home()
@@ -22,6 +35,8 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
+        Mouse.SetActive(true);
+        levelUI.SetActive(true);
     }
 
     public void Restart()

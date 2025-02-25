@@ -241,7 +241,6 @@ MonoBehaviour:
   canWeMoveMirrors: 1
   isLevelWon: 0
   levelWinPanel: {fileID: 1174747294}
-  pauseMenu: {fileID: 0}
 --- !u!4 &52896405
 Transform:
   m_ObjectHideFlags: 0
@@ -585,6 +584,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &453855379 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6695597656480269162, guid: 990933c8a83830c4abe3b863252bf009, type: 3}
+  m_PrefabInstance: {fileID: 375738477}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: affbb7111d684e74595fe5a2d60ce515, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &498295550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,6 +1017,14 @@ PrefabInstance:
     - target: {fileID: 6825630525558852092, guid: afe6f1dbe2daeb4429e0b75982020883, type: 3}
       propertyPath: m_PixelPerfect
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7123308988309678162, guid: afe6f1dbe2daeb4429e0b75982020883, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 453855379}
+    - target: {fileID: 7123308988309678162, guid: afe6f1dbe2daeb4429e0b75982020883, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LaunchBall
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

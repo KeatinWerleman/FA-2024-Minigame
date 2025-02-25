@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public bool canWeMoveMirrors = true;
     public bool isLevelWon = false;
     public GameObject levelWinPanel;
-    public GameObject pauseMenu;
+    
     
     
 
@@ -25,11 +25,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void Pause()
-    {
-        pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
-    }
+    
 
     // Start is called before the first frame update
     void Start()
@@ -108,7 +104,7 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("UNLOCKING LEVEL");
         int reachedIndex = PlayerPrefs.GetInt("ReachedIndex");
-        Debug.Log(reachedIndex);
+        Debug.Log("Reached Index is:" + reachedIndex);
         if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
         {
             Debug.Log("LEVEL START UNLOCK");
