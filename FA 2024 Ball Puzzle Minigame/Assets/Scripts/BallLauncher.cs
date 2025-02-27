@@ -22,6 +22,7 @@ public class BallLauncher : MonoBehaviour
     public TextMeshProUGUI ballsLeftText;
     public AudioClip ballLaunchClip;
     public GameObject ballLaunchParticleSystem;
+
     
     
     
@@ -30,7 +31,7 @@ public class BallLauncher : MonoBehaviour
     public static BallLauncher Instance;
     public bool isLaunchedBySwitch;
     public SpriteRenderer spriteRenderer;
-    public GameObject tubeTriggerZone;
+    public List<GameObject> tubeTriggerZones;
     
     private void Awake()
     {
@@ -45,7 +46,22 @@ public class BallLauncher : MonoBehaviour
         specialBallLaunchButtonText.SetText("Launch Special Ball (" + specialBallCount.ToString() + ")");
         isInOriginalLocation = true;
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        GameObject[] tubeTriggers = GameObject.FindGameObjectsWithTag("Tube Endpoint");
+        if (tubeTriggers.Length > 0)
+        {
+            tubeTriggerZones = new List<GameObject>();
+
+            foreach (GameObject tubeTrigger in tubeTriggers)
+            {
+
+                tubeTriggerZones.Add(tubeTrigger);
+
+            }
+        }
+
         
+
 
 
     }
@@ -91,14 +107,18 @@ public class BallLauncher : MonoBehaviour
         {
             Destroy(ballsInPlay[0]);
             ballsInPlay.RemoveAt(0);
-            if (tubeTriggerZone != null)
-            {
-                tubeTriggerZone.GetComponent<TubeTriggerZone>().isBallInTube = false;
-
-            }
+            
         }
         if (availibleBalls > 0)
         {
+            if (tubeTriggerZones != null && tubeTriggerZones.Count > 0)
+            {
+                foreach (GameObject tubeTrigger in tubeTriggerZones)
+                {
+                    tubeTrigger.GetComponent<TubeTriggerZone>().isBallInTube = false;
+                }
+
+            }
             GameManager.Instance.TurnLaunchStateOff();
             SoundFXManager.Instance.PlaySoundFXClip(ballLaunchClip, transform, volume);
             ParticleSystem.MainModule main = ballLaunchParticleSystem.GetComponent<ParticleSystem>().main;
@@ -126,9 +146,18 @@ public class BallLauncher : MonoBehaviour
         {
             Destroy(ballsInPlay[0]);
             ballsInPlay.RemoveAt(0);
+
         }
         if (specialBallCount > 0 && availibleBalls > 0)
         {
+            if (tubeTriggerZones != null && tubeTriggerZones.Count > 0)
+            {
+                foreach (GameObject tubeTrigger in tubeTriggerZones)
+                {
+                    tubeTrigger.GetComponent<TubeTriggerZone>().isBallInTube = false;
+                }
+
+            }
             GameManager.Instance.TurnLaunchStateOff();
             SoundFXManager.Instance.PlaySoundFXClip(ballLaunchClip, transform, volume);
             ParticleSystem.MainModule main = ballLaunchParticleSystem.GetComponent<ParticleSystem>().main;

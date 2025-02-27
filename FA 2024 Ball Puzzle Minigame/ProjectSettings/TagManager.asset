@@ -17,6 +17,7 @@ TagManager:
   - Mirror Wall Collider
   - Mouse
   - Level UI
+  - Tube Endpoint
   layers:
   - Default
   - TransparentFX

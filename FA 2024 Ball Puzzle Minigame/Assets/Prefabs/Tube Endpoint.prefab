@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5873801793329141001}
   m_Layer: 0
   m_Name: Tube
-  m_TagString: Untagged
+  m_TagString: Tube Endpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cornerColliders: []
   mirrors: []
-  affectedWalls: []
+  affectedWalls: {fileID: 0}
   triggerZones: []
   isBallInTube: 0
 --- !u!1 &3363213924393069691
