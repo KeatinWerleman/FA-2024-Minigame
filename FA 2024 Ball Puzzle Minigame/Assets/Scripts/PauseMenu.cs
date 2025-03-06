@@ -9,10 +9,12 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject levelUI;
     [SerializeField] private GameObject Mouse;
 
-    private void Start()
+    private void Awake()
     {
-        Mouse = GameObject.FindGameObjectWithTag("Mouse");
-        levelUI = GameObject.FindGameObjectWithTag("Level UI");
+        levelUI = GameObject.Find("Level UI Panel");
+        Mouse = GameObject.Find("Mouse");
+        
+        
         
     }
     public void Pause()
@@ -28,11 +30,13 @@ public class PauseMenu : MonoBehaviour
 
     public void Home()
     {
+        pauseMenu.SetActive(false);
         SceneManager.LoadScene("Main Menu");
     }
 
     public void Resume()
     {
+        
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         Mouse.SetActive(true);
@@ -41,6 +45,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
+        pauseMenu.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
