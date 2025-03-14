@@ -1131,6 +1131,7 @@ MonoBehaviour:
   - {fileID: 1685562328}
   - {fileID: 253684880}
   - {fileID: 1900301380}
+  isForTestBuild: 1
 --- !u!1001 &381598768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3913,8 +3914,6 @@ MonoBehaviour:
   canWeMoveMirrors: 0
   isLevelWon: 0
   levelWinPanel: {fileID: 0}
-  stopLaunchingButton: {fileID: 0}
-  launchButton: {fileID: 0}
 --- !u!4 &1284910109
 Transform:
   m_ObjectHideFlags: 0

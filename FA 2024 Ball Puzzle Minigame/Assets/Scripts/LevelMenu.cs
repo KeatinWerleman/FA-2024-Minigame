@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class LevelMenu : MonoBehaviour
 {
     public Button[] buttons;
+    public bool isForTestBuild;
 
     private void Start()
     {
@@ -26,8 +27,18 @@ public class LevelMenu : MonoBehaviour
     }
     public void OpenLevel(int levelId)
     {
-        string levelName = "Level " + levelId;
-        SceneManager.LoadScene(levelName);
+        if (isForTestBuild)
+        {
+            string levelName = "Test Level " + levelId;
+            SceneManager.LoadScene(levelName);
+        }
+
+        else if (!isForTestBuild)
+        {
+            string levelName = "Level " + levelId;
+            SceneManager.LoadScene(levelName);
+        }
+        
     }
    
     public void Clear()
