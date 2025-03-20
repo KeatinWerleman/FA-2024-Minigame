@@ -1617,8 +1617,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This is a TUBE. Balls can enter it from either end, and the tube will carry
-    it to the other side, over walls, bumpers, and targets.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 08107f6a417e3e345880e7b73201b8fc, type: 2}
   m_sharedMaterial: {fileID: 6782481935194132821, guid: 08107f6a417e3e345880e7b73201b8fc, type: 2}
@@ -4191,6 +4190,216 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3576782362615327506, guid: da7a6efb1ba9c414ca41a2757c1db35c, type: 3}
   m_PrefabInstance: {fileID: 482819699}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1960114954
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 155885606967408500, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 155885606967408500, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 155885606967408500, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 527.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 155885606967408500, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 320.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 155885606967408500, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -102.14751
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523242884767464925, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523242884767464925, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523242884767464925, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523242884767464925, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631244170541892040, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631244170541892040, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631244170541892040, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631244170541892040, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631244170541892040, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631244170541892040, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631244170541892040, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631244170541892040, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631244170541892040, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3631244170541892040, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4010981135046407682, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -318.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831262341550581978, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 5831262341550581978, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6413739792823595925, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_Name
+      value: Level Tutorials
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760064439055326585, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760064439055326585, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760064439055326585, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760064439055326585, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760064439055326585, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760064439055326585, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760064439055326585, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760064439055326585, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760064439055326585, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760064439055326585, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760064439055326585, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760064439055326585, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760064439055326585, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7770372374968981992, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889637237013515789, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889637237013515789, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889637237013515789, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 320.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7889637237013515789, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -296.4425
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098085950075678798, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098085950075678798, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098085950075678798, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098085950075678798, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098085950075678798, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 640.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098085950075678798, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 388.59003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8098085950075678798, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -563.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8418222930619795486, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_text
+      value: This is a TUBE. Balls can enter it from either end, and the tube will
+        carry it to the other side, over walls, bumpers, and targets.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
 --- !u!1001 &2049897195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5888,3 +6097,4 @@ SceneRoots:
   - {fileID: 1055418825}
   - {fileID: 437005068}
   - {fileID: 1615026185}
+  - {fileID: 1960114954}
