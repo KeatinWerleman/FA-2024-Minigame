@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 670331297968981586}
   - component: {fileID: 7558354142342401011}
   - component: {fileID: 1022893032878471753}
+  - component: {fileID: 2046097900811593264}
   m_Layer: 0
   m_Name: Open Tutorial Button
   m_TagString: Untagged
@@ -383,6 +384,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2046097900811593264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3989255789441706192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a039c2a8b771e24690b508365e9ef1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonColor: {r: 0, g: 0, b: 0, a: 0}
+  buttonImage: {fileID: 0}
+  currentRedValue: 0
+  currentGreenValue: 0
+  currentBlueValue: 0
+  startingRedValue: 0
+  startingGreenValue: 0
+  startingBlueValue: 0
+  isRedChanging: 0
+  isGreenChanging: 1
+  isBlueChanging: 0
+  isIncreasing: 1
 --- !u!1 &4758504383842329715
 GameObject:
   m_ObjectHideFlags: 0

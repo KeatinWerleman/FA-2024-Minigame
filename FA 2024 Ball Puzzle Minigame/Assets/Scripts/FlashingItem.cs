@@ -1,66 +1,106 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Timeline;
 using UnityEngine.UI;
 public class FlashingItem : MonoBehaviour
 {
-
-    
     public Color buttonColor;
     public Image buttonImage;
-    public float maxChangeValue;
-    public float changeValue = 1;
     public float currentRedValue;
-    public float minChangeValue;
+    public float currentGreenValue;
+    public float currentBlueValue;
+    public float startingRedValue;
+    public float startingGreenValue;
+    public float startingBlueValue;
+    static float changeValue = 0f;
+    public bool isRedChanging;
+    public bool isGreenChanging;
+    public bool isBlueChanging;
+    private float maximum = 1f;
+    private float minimum;
     public bool isIncreasing;
+    
     // Start is called before the first frame update
     void Start()
     {
         buttonImage = GetComponent<Image>();
         buttonColor = GetComponent<Image>().color;
         currentRedValue = buttonColor.r;
+        currentGreenValue = buttonColor.g;
+        currentBlueValue = buttonColor.b;
+        startingRedValue = buttonColor.r;
+        startingGreenValue = buttonColor.g;
+        startingBlueValue = buttonColor.b;
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isIncreasing == true)
+        if (isRedChanging && !isGreenChanging && !isBlueChanging)
         {
-            IncreaseAlphaValue();
+            currentRedValue = Mathf.Lerp(minimum, maximum, changeValue);
+            changeValue += 0.5f * Time.deltaTime;
+            if (changeValue > 1.0f)
+            {
+                float temp = maximum;
+                maximum = minimum;
+                minimum = temp;
+                changeValue = 0.0f;
+            }
+            buttonColor.r = currentRedValue;
+            buttonColor.g = currentGreenValue;
+            buttonColor.b = currentBlueValue;
+            buttonImage.color = new Color (buttonColor.r, buttonColor.g, buttonColor.b);
+           
+            
+
         }
 
-        else if (isIncreasing == false)
+        else if (!isRedChanging && isGreenChanging && !isBlueChanging)
         {
-            DecreaseAlphaValue();
+            currentGreenValue = Mathf.Lerp(minimum, maximum, changeValue);
+            changeValue += 0.5f * Time.deltaTime;
+            if (changeValue > 1.0f)
+            {
+                float temp = maximum;
+                maximum = minimum;
+                minimum = temp;
+                changeValue = 0.0f;
+            }
+            buttonColor.r = currentRedValue;
+            buttonColor.g = currentGreenValue;
+            buttonColor.b = currentBlueValue;
+            buttonImage.color = new Color(buttonColor.r, buttonColor.g, buttonColor.b);
         }
+
+        else if (!isRedChanging && !isGreenChanging && isBlueChanging)
+        {
+            currentBlueValue = Mathf.Lerp(minimum, maximum, changeValue);
+            changeValue += 2f * Time.deltaTime;
+            if (changeValue > 1.0f)
+            {
+                float temp = maximum;
+                maximum = minimum;
+                minimum = temp;
+                changeValue = 0.0f;
+            }
+            buttonColor.r = currentRedValue;
+            buttonColor.g = currentGreenValue;
+            buttonColor.b = currentBlueValue;
+            buttonImage.color = new Color(buttonColor.r, buttonColor.g, buttonColor.b);
+        }
+
     }
 
-
-    public void IncreaseAlphaValue()
+    public void TurnOffFlashing()
     {
-        buttonColor.r += 1;
-        currentRedValue = buttonColor.r;
-        buttonImage.color = buttonColor;
-        if (buttonColor.r >= maxChangeValue)
-        {
-            isIncreasing = false;
-            buttonColor.r = minChangeValue - 1;
-            buttonImage.color = buttonColor;
-        }
+        isRedChanging = false;
+        isGreenChanging = false;
+        isBlueChanging = false;
+        buttonImage.color = new Color(startingRedValue, startingGreenValue, startingBlueValue); 
     }
-    
-    public void DecreaseAlphaValue()
-    {
-        buttonColor.r -= 1;
-        currentRedValue = buttonColor.r;
-        buttonImage.color = buttonColor;
-        if (buttonColor.r <= minChangeValue)
-        {
-            isIncreasing = true;
-            buttonColor.r = minChangeValue + 1;
-            buttonImage.color = buttonColor;
 
-        }
-    }
 }
