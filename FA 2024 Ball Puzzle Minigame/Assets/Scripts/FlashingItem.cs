@@ -11,22 +11,24 @@ public class FlashingItem : MonoBehaviour
     public float currentRedValue;
     public float currentGreenValue;
     public float currentBlueValue;
-    public float startingRedValue;
-    public float startingGreenValue;
-    public float startingBlueValue;
+    private float startingRedValue;
+    private float startingGreenValue;
+    private float startingBlueValue;
     static float changeValue = 0f;
+    [SerializeField] float flashingSpeed;
     public bool isRedChanging;
     public bool isGreenChanging;
     public bool isBlueChanging;
-    private float maximum = 1f;
-    private float minimum;
-    public bool isIncreasing;
+    private float maximum = 1.2f;
+    private float minimum = 0.0f;
+    
     
     // Start is called before the first frame update
     void Start()
     {
         buttonImage = GetComponent<Image>();
         buttonColor = GetComponent<Image>().color;
+
         currentRedValue = buttonColor.r;
         currentGreenValue = buttonColor.g;
         currentBlueValue = buttonColor.b;
@@ -43,12 +45,14 @@ public class FlashingItem : MonoBehaviour
         {
             currentRedValue = Mathf.Lerp(minimum, maximum, changeValue);
             changeValue += 0.5f * Time.deltaTime;
-            if (changeValue > 1.0f)
+            if (changeValue >= 1.2f)
             {
                 float temp = maximum;
                 maximum = minimum;
                 minimum = temp;
                 changeValue = 0.0f;
+                Debug.Log("SWITCHING BACK" + "Current Red Value is " + currentRedValue);
+
             }
             buttonColor.r = currentRedValue;
             buttonColor.g = currentGreenValue;
@@ -63,12 +67,14 @@ public class FlashingItem : MonoBehaviour
         {
             currentGreenValue = Mathf.Lerp(minimum, maximum, changeValue);
             changeValue += 0.5f * Time.deltaTime;
-            if (changeValue > 1.0f)
+            if (changeValue >= 1.2f)
             {
+               
                 float temp = maximum;
                 maximum = minimum;
                 minimum = temp;
                 changeValue = 0.0f;
+                Debug.Log("SWITCHING BACK Current Green Value is " + currentGreenValue);
             }
             buttonColor.r = currentRedValue;
             buttonColor.g = currentGreenValue;
@@ -79,13 +85,14 @@ public class FlashingItem : MonoBehaviour
         else if (!isRedChanging && !isGreenChanging && isBlueChanging)
         {
             currentBlueValue = Mathf.Lerp(minimum, maximum, changeValue);
-            changeValue += 2f * Time.deltaTime;
-            if (changeValue > 1.0f)
+            changeValue += 0.5f * Time.deltaTime;
+            if (changeValue >= 1.2f)
             {
                 float temp = maximum;
                 maximum = minimum;
                 minimum = temp;
                 changeValue = 0.0f;
+                Debug.Log("SWITCHING BACK" + "Current Blue Value is " + currentBlueValue);
             }
             buttonColor.r = currentRedValue;
             buttonColor.g = currentGreenValue;

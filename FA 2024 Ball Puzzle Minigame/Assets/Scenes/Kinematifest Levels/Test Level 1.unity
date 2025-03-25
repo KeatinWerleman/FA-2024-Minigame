@@ -2297,6 +2297,7 @@ GameObject:
   - component: {fileID: 1338081540}
   - component: {fileID: 1338081539}
   - component: {fileID: 1338081538}
+  - component: {fileID: 1338081541}
   m_Layer: 0
   m_Name: Open Pick Up Mirrors Tutorial Button
   m_TagString: Untagged
@@ -2380,6 +2381,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1338081541}
+        m_TargetAssemblyTypeName: FlashingItem, Assembly-CSharp
+        m_MethodName: TurnOffFlashing
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1338081539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2418,6 +2431,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338081536}
   m_CullTransparentMesh: 1
+--- !u!114 &1338081541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338081536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a039c2a8b771e24690b508365e9ef1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonColor: {r: 0, g: 0, b: 0, a: 0}
+  buttonImage: {fileID: 0}
+  currentRedValue: 0
+  currentGreenValue: 0
+  currentBlueValue: 0
+  flashingSpeed: 0.25
+  isRedChanging: 0
+  isGreenChanging: 0
+  isBlueChanging: 1
+  isIncreasing: 0
 --- !u!1 &1481935973
 GameObject:
   m_ObjectHideFlags: 0
@@ -4174,6 +4209,22 @@ PrefabInstance:
     - target: {fileID: 1352088010581423069, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046097900811593264, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: isIncreasing
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046097900811593264, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: flashingSpeed
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046097900811593264, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: isBlueChanging
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046097900811593264, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: isGreenChanging
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3631244170541892040, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
       propertyPath: m_LocalPosition.x
