@@ -18,6 +18,7 @@ TagManager:
   - Mouse
   - Level UI
   - Tube Endpoint
+  - Button Group B
   layers:
   - Default
   - TransparentFX
