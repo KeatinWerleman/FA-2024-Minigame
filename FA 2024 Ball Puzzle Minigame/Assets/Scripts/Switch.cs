@@ -128,13 +128,15 @@ public class Switch : MonoBehaviour
                 if (collision.gameObject.tag == "Ball")
                 {
                     SoundFXManager.Instance.PlaySoundFXClip(switchHitClip, transform, volume);
+                    ParticleSystem.MainModule main = switchHitParticleSystem.GetComponent<ParticleSystem>().main;
+                    main.startColor = spriteRenderer.color;
                     tempPosition = affectedObject.transform.position;
                     tempRotation = affectedObject.transform.rotation;
                     affectedObject.transform.position = objectLocationSprite.transform.position;
                     affectedObject.transform.rotation = objectLocationSprite.transform.rotation;
                     objectLocationSprite.transform.position = tempPosition;
                     objectLocationSprite.transform.rotation = tempRotation;
-                    
+                   
                     Destroy(switchHitParticleSystem.gameObject, 0.5f);
 
                 }
