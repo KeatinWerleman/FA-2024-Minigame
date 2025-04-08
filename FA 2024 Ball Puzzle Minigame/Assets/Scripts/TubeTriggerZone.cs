@@ -36,13 +36,24 @@ public class TubeTriggerZone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        foreach (var mirror in mirrors)
+        {
+            if (mirror == null)
+            {
+                mirrors.Remove(mirror);
+            }
+            else
+            {
+                continue;
+            }
+        }
 
     }
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         Debug.Log("ENTERED TRIGGER ZONE");
         if (collision.gameObject.tag == "Ball" || collision.gameObject.tag == "Special Ball")
         {

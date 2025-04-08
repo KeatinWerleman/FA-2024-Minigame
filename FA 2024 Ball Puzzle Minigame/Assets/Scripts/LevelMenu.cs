@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,22 +9,27 @@ public class LevelMenu : MonoBehaviour
 {
     public Button[] buttons;
     public bool isForTestBuild;
-
+    public bool buildHasLockedLevels;
     private void Start()
     {
 
-        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
-        
-        
-        for (int i = 0; i < buttons.Length; i++)
+        buttons.AddRange(GameObject.FindGameObjectsWithTag("Level Buttons"));
+        if (buildHasLockedLevels)
         {
-            buttons[i].interactable = false;
-        }
+            int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
 
-        for (int i = 0; i < unlockedLevel; i++)
-        {
-            buttons[i].interactable = true;
+
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                buttons[i].interactable = false;
+            }
+
+            for (int i = 0; i < unlockedLevel; i++)
+            {
+                buttons[i].interactable = true;
+            }
         }
+        
     }
     public void OpenLevel(int levelId)
     {
@@ -40,21 +46,29 @@ public class LevelMenu : MonoBehaviour
         }
         
     }
+
+    
+
    
     public void Clear()
     {
-        PlayerPrefs.DeleteAll();
-        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
 
-        for (int i = 0; i < buttons.Length; i++)
+        if (buildHasLockedLevels)
         {
-            buttons[i].interactable = false;
-        }
+            PlayerPrefs.DeleteAll();
+            int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);
 
-        for (int i = 0; i < unlockedLevel; i++)
-        {
-            buttons[i].interactable = true;
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                buttons[i].interactable = false;
+            }
+
+            for (int i = 0; i < unlockedLevel; i++)
+            {
+                buttons[i].interactable = true;
+            }
         }
+       
     }
     
 }
