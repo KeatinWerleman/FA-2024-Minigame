@@ -13,7 +13,9 @@ public class LevelMenu : MonoBehaviour
     private void Start()
     {
 
-        buttons.AddRange(GameObject.FindGameObjectsWithTag("Level Buttons"));
+        
+
+     
         if (buildHasLockedLevels)
         {
             int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 1);

@@ -9,8 +9,7 @@ public class Ball : MonoBehaviour
     public Vector2 ballDirection;
     
     
-    public Rigidbody2D ballRigidbody;
-    public Collider ballCollider;
+    
     
     
    
@@ -18,8 +17,7 @@ public class Ball : MonoBehaviour
     private void Start()
     {
         ballDirection = new Vector2(BallLauncher.Instance.launchDirection.x, BallLauncher.Instance.launchDirection.y);
-        ballRigidbody = GetComponent<Rigidbody2D>();
-        ballCollider = GetComponent<Collider>();
+        
         
         
 }

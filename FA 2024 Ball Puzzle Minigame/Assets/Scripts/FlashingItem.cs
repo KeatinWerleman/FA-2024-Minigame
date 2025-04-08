@@ -20,7 +20,7 @@ public class FlashingItem : MonoBehaviour
     public bool isGreenChanging;
     public bool isBlueChanging;
     private float maximum = 1.2f;
-    private float minimum = 0.0f;
+    private float minimum = -0.2f;
     
     
     // Start is called before the first frame update
@@ -45,12 +45,12 @@ public class FlashingItem : MonoBehaviour
         {
             currentRedValue = Mathf.Lerp(minimum, maximum, changeValue);
             changeValue += 0.5f * Time.deltaTime;
-            if (changeValue >= 1.2f)
+            if (changeValue > 1.2f)
             {
                 float temp = maximum;
                 maximum = minimum;
                 minimum = temp;
-                changeValue = 0.0f;
+                changeValue = -0.2f;
                 Debug.Log("SWITCHING BACK" + "Current Red Value is " + currentRedValue);
 
             }
@@ -67,13 +67,13 @@ public class FlashingItem : MonoBehaviour
         {
             currentGreenValue = Mathf.Lerp(minimum, maximum, changeValue);
             changeValue += 0.5f * Time.deltaTime;
-            if (changeValue >= 1.2f)
+            if (changeValue > 1.2f)
             {
                
                 float temp = maximum;
                 maximum = minimum;
                 minimum = temp;
-                changeValue = 0.0f;
+                changeValue = -0.2f;
                 Debug.Log("SWITCHING BACK Current Green Value is " + currentGreenValue);
             }
             buttonColor.r = currentRedValue;
@@ -86,12 +86,12 @@ public class FlashingItem : MonoBehaviour
         {
             currentBlueValue = Mathf.Lerp(minimum, maximum, changeValue);
             changeValue += 0.5f * Time.deltaTime;
-            if (changeValue >= 1.2f)
+            if (changeValue > 1.2f)
             {
                 float temp = maximum;
                 maximum = minimum;
                 minimum = temp;
-                changeValue = 0.0f;
+                changeValue = -0.2f;
                 Debug.Log("SWITCHING BACK" + "Current Blue Value is " + currentBlueValue);
             }
             buttonColor.r = currentRedValue;
