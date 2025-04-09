@@ -130,6 +130,7 @@ public class Switch : MonoBehaviour
                     SoundFXManager.Instance.PlaySoundFXClip(switchHitClip, transform, volume);
                     ParticleSystem.MainModule main = switchHitParticleSystem.GetComponent<ParticleSystem>().main;
                     main.startColor = spriteRenderer.color;
+                    var particles = Instantiate(switchHitParticleSystem, transform.position, Quaternion.identity);
                     tempPosition = affectedObject.transform.position;
                     tempRotation = affectedObject.transform.rotation;
                     affectedObject.transform.position = objectLocationSprite.transform.position;
@@ -137,7 +138,7 @@ public class Switch : MonoBehaviour
                     objectLocationSprite.transform.position = tempPosition;
                     objectLocationSprite.transform.rotation = tempRotation;
                    
-                    Destroy(switchHitParticleSystem.gameObject, 0.5f);
+                    Destroy(particles, 0.5f);
 
                 }
             }

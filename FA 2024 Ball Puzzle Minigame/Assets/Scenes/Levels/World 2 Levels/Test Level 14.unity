@@ -1552,6 +1552,30 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6357044381668775604, guid: 0a73b627f9eb2dd44a7f571d5b09c2ae, type: 3}
+      propertyPath: hitColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6357044381668775604, guid: 0a73b627f9eb2dd44a7f571d5b09c2ae, type: 3}
+      propertyPath: hitColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6357044381668775604, guid: 0a73b627f9eb2dd44a7f571d5b09c2ae, type: 3}
+      propertyPath: hitColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6357044381668775604, guid: 0a73b627f9eb2dd44a7f571d5b09c2ae, type: 3}
+      propertyPath: startColor.b
+      value: 0.12941177
+      objectReference: {fileID: 0}
+    - target: {fileID: 6357044381668775604, guid: 0a73b627f9eb2dd44a7f571d5b09c2ae, type: 3}
+      propertyPath: startColor.g
+      value: 0.039215688
+      objectReference: {fileID: 0}
+    - target: {fileID: 6357044381668775604, guid: 0a73b627f9eb2dd44a7f571d5b09c2ae, type: 3}
+      propertyPath: startColor.r
+      value: 0.7686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 6357044381668775604, guid: 0a73b627f9eb2dd44a7f571d5b09c2ae, type: 3}
       propertyPath: affectedObject
       value: 
       objectReference: {fileID: 234595035}
@@ -1993,6 +2017,30 @@ PrefabInstance:
     - target: {fileID: 2946953197830474735, guid: 0a73b627f9eb2dd44a7f571d5b09c2ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6357044381668775604, guid: 0a73b627f9eb2dd44a7f571d5b09c2ae, type: 3}
+      propertyPath: hitColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6357044381668775604, guid: 0a73b627f9eb2dd44a7f571d5b09c2ae, type: 3}
+      propertyPath: hitColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6357044381668775604, guid: 0a73b627f9eb2dd44a7f571d5b09c2ae, type: 3}
+      propertyPath: hitColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6357044381668775604, guid: 0a73b627f9eb2dd44a7f571d5b09c2ae, type: 3}
+      propertyPath: startColor.b
+      value: 0.4039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 6357044381668775604, guid: 0a73b627f9eb2dd44a7f571d5b09c2ae, type: 3}
+      propertyPath: startColor.g
+      value: 0.2784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 6357044381668775604, guid: 0a73b627f9eb2dd44a7f571d5b09c2ae, type: 3}
+      propertyPath: startColor.r
+      value: 0.04705883
       objectReference: {fileID: 0}
     - target: {fileID: 6357044381668775604, guid: 0a73b627f9eb2dd44a7f571d5b09c2ae, type: 3}
       propertyPath: affectedObject
