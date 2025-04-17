@@ -2239,7 +2239,7 @@ MonoBehaviour:
   - {fileID: 276114239}
   - {fileID: 201121409}
   - {fileID: 1811460908}
-  isForTestBuild: 0
+  isForTestBuild: 1
   buildHasLockedLevels: 0
 --- !u!1 &414702666
 GameObject:
