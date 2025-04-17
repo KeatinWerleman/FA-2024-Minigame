@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class LevelMenu : MonoBehaviour
 {
     public Button[] buttons;
+    public GameObject[] worldPanels;
     public bool isForTestBuild;
     public bool buildHasLockedLevels;
     private void Start()
@@ -49,7 +50,14 @@ public class LevelMenu : MonoBehaviour
         
     }
 
-    
+    public void OpenWorldPanel(int worldNumber)
+    {
+        for (int i = 0; i < worldPanels.Length; i++)
+        {
+            worldPanels[i].gameObject.SetActive(false);
+            worldPanels[worldNumber -1].gameObject.SetActive(true);
+        }
+    }
 
    
     public void Clear()
