@@ -23,8 +23,7 @@ public class OptionsManager : MonoBehaviour
     {
         soundEffectsVolumeSlider = GameObject.Find("Sound Effects Volume Slider").GetComponent<Slider>();
         
-        PlayerPrefs.SetString("Are Grids On", "true");
-        PlayerPrefs.SetString("Are Particles On", "true");
+        
         ApplySettings();
 
     }
@@ -95,33 +94,31 @@ public class OptionsManager : MonoBehaviour
         Image gridsButtonImage = gridsButton.GetComponent<Image>();
         if (PlayerPrefs.GetString("Are Particles On") == "true")
         {
+            areParticlesOn = true;
             particleEffectsButtonImage.color = new Color(onColor.r, onColor.g, onColor.b);
             particlesButtonText.SetText("ON");
         }
 
         else if (PlayerPrefs.GetString("Are Particles On") == "false")
         {
+            areParticlesOn = false;
             particleEffectsButtonImage.color = new Color(offColor.r, offColor.g, offColor.b);
             particlesButtonText.SetText("OFF");
         }
 
         if (PlayerPrefs.GetString("Are Grids On") == "true")
         {
+            areGridsOn = true;
             gridsButtonImage.color = new Color(onColor.r, onColor.g, onColor.b);
             gridsButtonText.SetText("ON");
         }
 
         else if (PlayerPrefs.GetString("Are Grids On") == "false")
         {
+            areGridsOn = false;
             gridsButtonImage.color = new Color(offColor.r, offColor.g, offColor.b);
             gridsButtonText.SetText("OFF");
         }
-
-        
-            
-        
-
-
 
     }
     }

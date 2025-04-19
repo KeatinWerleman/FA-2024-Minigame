@@ -123,7 +123,7 @@ public class BallLauncher : MonoBehaviour
             SoundFXManager.Instance.PlaySoundFXClip(ballLaunchClip, transform, volume);
             ParticleSystem.MainModule main = ballLaunchParticleSystem.GetComponent<ParticleSystem>().main;
             main.startColor = spriteRenderer.color;
-            var particles = Instantiate(ballLaunchParticleSystem, ballSpawnPoint.transform.position, ballSpawnPoint.rotation);
+            
             GameObject newBall = Instantiate(ballPrefab, ballSpawnPoint.position, Quaternion.identity);
             newBall.GetComponent<Rigidbody2D>().AddForce(launchDirection * launchSpeed);
             newBall.GetComponent<SpriteRenderer>().color = ballColor;
@@ -131,9 +131,13 @@ public class BallLauncher : MonoBehaviour
             availibleBalls -= 1;
 
             ballsLeftText.SetText(availibleBalls.ToString());
-
+            if (PlayerPrefs.GetString("Are Particles On") == "true")
+            {
+                var particles = Instantiate(ballLaunchParticleSystem, ballSpawnPoint.transform.position, ballSpawnPoint.rotation);
+                Destroy(particles, 0.5f);
+            }
             Debug.Log("Ball Launched /n Balls Remaining: " + availibleBalls);
-            Destroy(particles, 0.5f);
+            
         }
 
         

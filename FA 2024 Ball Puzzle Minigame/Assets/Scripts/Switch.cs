@@ -52,7 +52,7 @@ public class Switch : MonoBehaviour
                             affectedObject.transform.rotation = objectLocationSprite.transform.rotation;
                             objectLocationSprite.transform.position = tempPosition;
                             objectLocationSprite.transform.rotation = tempRotation;
-                            if (PlayerPrefs.GetString("Are Particles On") == "True")
+                            if (PlayerPrefs.GetString("Are Particles On") == "true")
                             {
                                 var particles = Instantiate(switchHitParticleSystem, transform.position, Quaternion.identity);
                                 Destroy(particles, 0.5f);
@@ -80,7 +80,7 @@ public class Switch : MonoBehaviour
                         affectedObject.transform.rotation = objectLocationSprite.transform.rotation;
                         objectLocationSprite.transform.position = tempPosition;
                         objectLocationSprite.transform.rotation = tempRotation;
-                        if (PlayerPrefs.GetString("Are Particles On") == "True")
+                        if (PlayerPrefs.GetString("Are Particles On") == "true")
                         {
                             var particles = Instantiate(switchHitParticleSystem, transform.position, Quaternion.identity);
                             Destroy(particles, 0.5f);
@@ -121,7 +121,7 @@ public class Switch : MonoBehaviour
                             affectedObject.transform.rotation = objectLocationSprite.transform.rotation;
                             objectLocationSprite.transform.position = tempPosition;
                             objectLocationSprite.transform.rotation = tempRotation;
-                            if (PlayerPrefs.GetString("Are Particles On") == "True")
+                            if (PlayerPrefs.GetString("Are Particles On") == "true")
                             {
                                 var particles = Instantiate(switchHitParticleSystem, transform.position, Quaternion.identity);
                                 Destroy(particles, 0.5f);
@@ -151,7 +151,7 @@ public class Switch : MonoBehaviour
                     affectedObject.transform.rotation = objectLocationSprite.transform.rotation;
                     objectLocationSprite.transform.position = tempPosition;
                     objectLocationSprite.transform.rotation = tempRotation;
-                    if (PlayerPrefs.GetString("Are Particles On") == "True")
+                    if (PlayerPrefs.GetString("Are Particles On") == "true")
                     {
                         var particles = Instantiate(switchHitParticleSystem, transform.position, Quaternion.identity);
                         Destroy(particles, 0.5f);
