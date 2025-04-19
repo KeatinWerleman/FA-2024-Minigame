@@ -55,7 +55,7 @@ public class LevelMenu : MonoBehaviour
         for (int i = 0; i < worldPanels.Length; i++)
         {
             worldPanels[i].gameObject.SetActive(false);
-            worldPanels[worldNumber -1].gameObject.SetActive(true);
+            worldPanels[worldNumber - 1].gameObject.SetActive(true);
         }
     }
 

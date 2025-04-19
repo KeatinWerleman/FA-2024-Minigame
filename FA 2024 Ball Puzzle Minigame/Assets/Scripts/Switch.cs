@@ -44,14 +44,19 @@ public class Switch : MonoBehaviour
                             SoundFXManager.Instance.PlaySoundFXClip(switchHitClip, transform, volume);
                             ParticleSystem.MainModule main = switchHitParticleSystem.GetComponent<ParticleSystem>().main;
                             main.startColor = spriteRenderer.color;
-                            var particles = Instantiate(switchHitParticleSystem, transform.position, Quaternion.identity);
+                            
+                           
                             tempPosition = affectedObject.transform.position;
                             tempRotation = affectedObject.transform.rotation;
                             affectedObject.transform.position = objectLocationSprite.transform.position;
                             affectedObject.transform.rotation = objectLocationSprite.transform.rotation;
                             objectLocationSprite.transform.position = tempPosition;
                             objectLocationSprite.transform.rotation = tempRotation;
-                            Destroy(particles, 0.5f);
+                            if (PlayerPrefs.GetString("Are Particles On") == "True")
+                            {
+                                var particles = Instantiate(switchHitParticleSystem, transform.position, Quaternion.identity);
+                                Destroy(particles, 0.5f);
+                            }
                             Debug.Log("Special Ball Touched Switch");
                             Destroy(collision.gameObject);
                             GameManager.Instance.TurnLaunchStateOn();
@@ -68,14 +73,18 @@ public class Switch : MonoBehaviour
                         SoundFXManager.Instance.PlaySoundFXClip(switchHitClip, transform, volume);
                         ParticleSystem.MainModule main = switchHitParticleSystem.GetComponent<ParticleSystem>().main;
                         main.startColor = spriteRenderer.color;
-                        var particles = Instantiate(switchHitParticleSystem, transform.position, Quaternion.identity);
+                        
                         tempPosition = affectedObject.transform.position;
                         tempRotation = affectedObject.transform.rotation;
                         affectedObject.transform.position = objectLocationSprite.transform.position;
                         affectedObject.transform.rotation = objectLocationSprite.transform.rotation;
                         objectLocationSprite.transform.position = tempPosition;
                         objectLocationSprite.transform.rotation = tempRotation;
-                        Destroy(particles, 0.5f);
+                        if (PlayerPrefs.GetString("Are Particles On") == "True")
+                        {
+                            var particles = Instantiate(switchHitParticleSystem, transform.position, Quaternion.identity);
+                            Destroy(particles, 0.5f);
+                        }
 
                         GameManager.Instance.TurnLaunchStateOn();
                         Destroy(collision.gameObject);
@@ -105,15 +114,20 @@ public class Switch : MonoBehaviour
                             SoundFXManager.Instance.PlaySoundFXClip(switchHitClip, transform, volume);
                             ParticleSystem.MainModule main = switchHitParticleSystem.GetComponent<ParticleSystem>().main;
                             main.startColor = spriteRenderer.color;
-                            var particles = Instantiate(switchHitParticleSystem, transform.position, Quaternion.identity);
+                            
                             tempPosition = affectedObject.transform.position;
                             tempRotation = affectedObject.transform.rotation;
                             affectedObject.transform.position = objectLocationSprite.transform.position;
                             affectedObject.transform.rotation = objectLocationSprite.transform.rotation;
                             objectLocationSprite.transform.position = tempPosition;
                             objectLocationSprite.transform.rotation = tempRotation;
+                            if (PlayerPrefs.GetString("Are Particles On") == "True")
+                            {
+                                var particles = Instantiate(switchHitParticleSystem, transform.position, Quaternion.identity);
+                                Destroy(particles, 0.5f);
+                            }
                             Debug.Log("Special Ball Touched Button");
-                            Destroy(particles, 0.5f);
+                            
 
 
                         }
@@ -130,15 +144,19 @@ public class Switch : MonoBehaviour
                     SoundFXManager.Instance.PlaySoundFXClip(switchHitClip, transform, volume);
                     ParticleSystem.MainModule main = switchHitParticleSystem.GetComponent<ParticleSystem>().main;
                     main.startColor = spriteRenderer.color;
-                    var particles = Instantiate(switchHitParticleSystem, transform.position, Quaternion.identity);
+                   
                     tempPosition = affectedObject.transform.position;
                     tempRotation = affectedObject.transform.rotation;
                     affectedObject.transform.position = objectLocationSprite.transform.position;
                     affectedObject.transform.rotation = objectLocationSprite.transform.rotation;
                     objectLocationSprite.transform.position = tempPosition;
                     objectLocationSprite.transform.rotation = tempRotation;
-                   
-                    Destroy(particles, 0.5f);
+                    if (PlayerPrefs.GetString("Are Particles On") == "True")
+                    {
+                        var particles = Instantiate(switchHitParticleSystem, transform.position, Quaternion.identity);
+                        Destroy(particles, 0.5f);
+                    }
+
 
                 }
             }

@@ -13,6 +13,10 @@ public class WinBlock : MonoBehaviour
 
     // Start is called before the first frame update
 
+    private void Update()
+    {
+        volume = PlayerPrefs.GetFloat("Sound Effects Volume");
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
 

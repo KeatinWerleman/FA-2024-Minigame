@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GridManager : MonoBehaviour
@@ -8,10 +9,23 @@ public class GridManager : MonoBehaviour
 
     [SerializeField] private int width, height;    // Start is called before the first frame update
     [SerializeField] private Tile tilePrefab;
+    [SerializeField] private bool areGridsOn;
     
     void Start()
     {
-        GenerateGrid();
+
+        if (PlayerPrefs.GetString("Are Grids On") == "true")
+        {
+            GenerateGrid();
+        }
+
+        else if (PlayerPrefs.GetString("Are Grids On") == "false")
+        {
+            Debug.Log("Grids are off");
+        }
+        
+
+        
     }
 
     void GenerateGrid()

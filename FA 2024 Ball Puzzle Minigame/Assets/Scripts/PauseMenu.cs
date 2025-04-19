@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject levelUI;
     [SerializeField] private GameObject Mouse;
+    [SerializeField] GameObject optionsMenu;
 
     private void Awake()
     {
@@ -42,6 +43,11 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         Mouse.SetActive(true);
         levelUI.SetActive(true);
+    }
+
+    public void OpenOptions()
+    {
+        optionsMenu.SetActive(true);
     }
 
     public void Restart()

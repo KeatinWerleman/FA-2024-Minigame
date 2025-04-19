@@ -67,7 +67,7 @@ public class BallLauncher : MonoBehaviour
     }
     void Update()
     {
-        
+        volume = PlayerPrefs.GetFloat("Sound Effects Volume");
         if (!isLaunchedBySwitch)
         {
             if (Input.GetKeyDown(KeyCode.W))

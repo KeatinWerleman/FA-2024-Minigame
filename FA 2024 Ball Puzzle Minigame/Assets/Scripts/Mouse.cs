@@ -17,12 +17,17 @@ public class Mouse : MonoBehaviour
     Vector3 offset;
     public AudioClip pickUpSound;
     public AudioClip putDownSound;
-    public float volume = 0.5f;
+    public float volume;
     public Vector3 initialPosition;
 
-    
+    private void Start()
+    {
+        
+    }
+
     void Update()
     {
+        volume = PlayerPrefs.GetFloat("Sound Effects Volume");
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
         transform.position = mousePosition;
