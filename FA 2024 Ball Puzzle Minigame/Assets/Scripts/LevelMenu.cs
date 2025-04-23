@@ -59,6 +59,14 @@ public class LevelMenu : MonoBehaviour
         }
     }
 
+    public void CloseWorldPanel()
+    {
+        for (int i = 0; i < worldPanels.Length; i++)
+        {
+            worldPanels[i].gameObject.SetActive(false);
+        }
+    }
+
    
     public void Clear()
     {
