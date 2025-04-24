@@ -9,7 +9,7 @@ public class GridManager : MonoBehaviour
 
     [SerializeField] private int width, height;    // Start is called before the first frame update
     [SerializeField] private Tile tilePrefab;
-    [SerializeField] private bool areGridsOn;
+    
     
     void Start()
     {
