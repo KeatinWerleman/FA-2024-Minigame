@@ -2102,7 +2102,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: -150}
+  m_AnchoredPosition: {x: 300, y: -200}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1338081538
@@ -2228,10 +2228,12 @@ MonoBehaviour:
   currentRedValue: 0
   currentGreenValue: 0
   currentBlueValue: 0
-  flashingSpeed: 0.25
-  isRedChanging: 0
+  isMovingUp: 0
+  changeValue: 0
+  flashingSpeed: 1
+  isRedChanging: 1
   isGreenChanging: 0
-  isBlueChanging: 1
+  isBlueChanging: 0
 --- !u!1001 &1496913870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4887,8 +4889,12 @@ PrefabInstance:
       value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2046097900811593264, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
-      propertyPath: isBlueChanging
+      propertyPath: isRedChanging
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046097900811593264, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: isBlueChanging
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2046097900811593264, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
       propertyPath: isGreenChanging
@@ -4974,10 +4980,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 5831262341550581978, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
-      propertyPath: m_SortingOrder
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6413739792823595925, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
       propertyPath: m_Name
       value: Level Tutorials
