@@ -11,16 +11,17 @@ public class FlashingItem : MonoBehaviour
     public float currentRedValue;
     public float currentGreenValue;
     public float currentBlueValue;
+    public bool isMovingUp;
     private float startingRedValue;
     private float startingGreenValue;
     private float startingBlueValue;
-    static float changeValue = 0f;
+    
+    [SerializeField] float changeValue = 0f;
     [SerializeField] float flashingSpeed;
     public bool isRedChanging;
     public bool isGreenChanging;
     public bool isBlueChanging;
-    private float maximum = 1.2f;
-    private float minimum = -0.2f;
+   
     
     
     // Start is called before the first frame update
@@ -35,7 +36,6 @@ public class FlashingItem : MonoBehaviour
         startingRedValue = buttonColor.r;
         startingGreenValue = buttonColor.g;
         startingBlueValue = buttonColor.b;
-        
     }
 
     // Update is called once per frame
@@ -43,38 +43,52 @@ public class FlashingItem : MonoBehaviour
     {
         if (isRedChanging && !isGreenChanging && !isBlueChanging)
         {
-            currentRedValue = Mathf.Lerp(minimum, maximum, changeValue);
-            changeValue += 0.5f * Time.deltaTime;
-            if (changeValue > 1.2f)
+            
+            if (!isMovingUp)
             {
-                float temp = maximum;
-                maximum = minimum;
-                minimum = temp;
-                changeValue = -0.2f;
-                Debug.Log("SWITCHING BACK" + "Current Red Value is " + currentRedValue);
+                currentRedValue = Mathf.SmoothDamp(currentRedValue, 0, ref changeValue, 1f);
+            }
 
+            else if (isMovingUp)
+            {
+                currentRedValue = Mathf.SmoothDamp(currentRedValue, 1, ref changeValue, 1f);
+            }
+
+            if (currentRedValue >= .8f)
+            {
+                isMovingUp = false;
+            }
+
+            else if (currentRedValue <= .2f)
+            { 
+                isMovingUp = true;
             }
             buttonColor.r = currentRedValue;
             buttonColor.g = currentGreenValue;
             buttonColor.b = currentBlueValue;
-            buttonImage.color = new Color (buttonColor.r, buttonColor.g, buttonColor.b);
-           
-            
-
+            buttonImage.color = new Color(buttonColor.r, buttonColor.g, buttonColor.b);
         }
 
         else if (!isRedChanging && isGreenChanging && !isBlueChanging)
         {
-            currentGreenValue = Mathf.Lerp(minimum, maximum, changeValue);
-            changeValue += 0.5f * Time.deltaTime;
-            if (changeValue > 1.2f)
+            if (!isMovingUp)
             {
-               
-                float temp = maximum;
-                maximum = minimum;
-                minimum = temp;
-                changeValue = -0.2f;
-                Debug.Log("SWITCHING BACK Current Green Value is " + currentGreenValue);
+                currentGreenValue = Mathf.SmoothDamp(currentGreenValue, 0, ref changeValue, 1f);
+            }
+
+            else if (isMovingUp)
+            {
+                currentGreenValue = Mathf.SmoothDamp(currentGreenValue, 1, ref changeValue, 1f);
+            }
+
+            if (currentGreenValue >= .8f)
+            {
+                isMovingUp = false;
+            }
+
+            else if (currentGreenValue <= .2f)
+            {
+                isMovingUp = true;
             }
             buttonColor.r = currentRedValue;
             buttonColor.g = currentGreenValue;
@@ -84,22 +98,38 @@ public class FlashingItem : MonoBehaviour
 
         else if (!isRedChanging && !isGreenChanging && isBlueChanging)
         {
-            currentBlueValue = Mathf.Lerp(minimum, maximum, changeValue);
-            changeValue += 0.5f * Time.deltaTime;
-            if (changeValue > 1.2f)
+            if (!isMovingUp)
             {
-                float temp = maximum;
-                maximum = minimum;
-                minimum = temp;
-                changeValue = -0.2f;
-                Debug.Log("SWITCHING BACK" + "Current Blue Value is " + currentBlueValue);
+                currentBlueValue = Mathf.SmoothDamp(currentBlueValue, 0, ref changeValue, 1f);
+            }
+
+            else if (isMovingUp)
+            {
+                currentBlueValue = Mathf.SmoothDamp(currentBlueValue, 1, ref changeValue, 1f);
+            }
+
+            if (currentBlueValue >= .8f)
+            {
+                isMovingUp = false;
+            }
+
+            else if (currentBlueValue <= .2f)
+            {
+                isMovingUp = true;
             }
             buttonColor.r = currentRedValue;
             buttonColor.g = currentGreenValue;
             buttonColor.b = currentBlueValue;
             buttonImage.color = new Color(buttonColor.r, buttonColor.g, buttonColor.b);
         }
+    }
 
+    private void ApplyNewColor(float newColorValue)
+    {
+        buttonColor.r = currentRedValue;
+        buttonColor.g = currentGreenValue;
+        buttonColor.b = currentBlueValue;
+        buttonImage.color = new Color(buttonColor.r, buttonColor.g, buttonColor.b);
     }
 
     public void TurnOffFlashing()

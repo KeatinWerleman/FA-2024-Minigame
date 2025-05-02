@@ -59,11 +59,6 @@ public class BallLauncher : MonoBehaviour
 
             }
         }
-
-        
-
-
-
     }
     void Update()
     {
@@ -92,13 +87,6 @@ public class BallLauncher : MonoBehaviour
         {
             ClearField();
         }
-
-        
-
-        
-
-        
-
     }
     public void LaunchBall()
     {
@@ -138,10 +126,7 @@ public class BallLauncher : MonoBehaviour
             }
             Debug.Log("Ball Launched /n Balls Remaining: " + availibleBalls);
             
-        }
-
-        
-        
+        } 
     }
 
     public void LaunchSpecialBall()
@@ -179,9 +164,6 @@ public class BallLauncher : MonoBehaviour
             Debug.Log("Ball Launched /n Balls Remaining: " + availibleBalls);
             Destroy(particles, 0.5f);
         }
-
-        
-
     }
 
     public void ClearField()
@@ -193,6 +175,4 @@ public class BallLauncher : MonoBehaviour
         }
         
     }
-
-
 }

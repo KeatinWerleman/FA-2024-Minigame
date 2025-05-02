@@ -196,7 +196,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_TargetDisplay: 0
 --- !u!114 &1523242884767464925
 MonoBehaviour:
@@ -413,13 +413,10 @@ MonoBehaviour:
   currentRedValue: 0
   currentGreenValue: 0
   currentBlueValue: 0
-  startingRedValue: 0
-  startingGreenValue: 0
-  startingBlueValue: 0
+  flashingSpeed: 0
   isRedChanging: 0
   isGreenChanging: 1
   isBlueChanging: 0
-  isIncreasing: 1
 --- !u!1 &4758504383842329715
 GameObject:
   m_ObjectHideFlags: 0

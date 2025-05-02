@@ -8,12 +8,15 @@ using Unity.VisualScripting;
 public class OptionsManager : MonoBehaviour
 {
     public float soundEffectsVolume;
+    public float backgroundMusicVolume;
     public bool areGridsOn;
     public bool areParticlesOn;
     public Button particleEffectsButton;
     public Button gridsButton;
     public Slider soundEffectsVolumeSlider;
+    public Slider backgroundMusicVolumeSlider;
     public TextMeshProUGUI soundEffectsVolumeText;
+    public TextMeshProUGUI backgroundMusicVolumeText;
     public TextMeshProUGUI gridsButtonText;
     public TextMeshProUGUI particlesButtonText;
     public Color onColor;
@@ -21,7 +24,7 @@ public class OptionsManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        soundEffectsVolumeSlider = GameObject.Find("Sound Effects Volume Slider").GetComponent<Slider>();
+        
         
         
         ApplySettings();
@@ -34,11 +37,19 @@ public class OptionsManager : MonoBehaviour
        
     }
 
-    public void ChangeVolume()
+    public void ChangeSFXVolume()
     {
         soundEffectsVolume = soundEffectsVolumeSlider.value;
         soundEffectsVolumeText.SetText("Sound Effects Volume: " + soundEffectsVolume);
         PlayerPrefs.SetFloat("Sound Effects Volume", soundEffectsVolume/100);
+    }
+
+    public void ChangeBGMusicVolume()
+    {
+        backgroundMusicVolume = backgroundMusicVolumeSlider.value;
+        backgroundMusicVolumeText.SetText("BG Music Volume: " +  backgroundMusicVolume);
+        PlayerPrefs.SetFloat("Background Music Volume", backgroundMusicVolume/100);
+
     }
 
     public void ChangeGridSettings()

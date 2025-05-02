@@ -33,14 +33,5 @@ public class Ball : MonoBehaviour
         
         ballDirection = Vector2.Reflect(ballDirection.normalized, firstContact.normal);
         ballDirection = new Vector2(Mathf.Round(ballDirection.x), Mathf.Round(ballDirection.y));
-        
-
     }
-
-
-
-    
-
-
-
 }

@@ -148,6 +148,7 @@ MonoBehaviour:
   affectedWalls: {fileID: 0}
   triggerZones: []
   isBallInTube: 0
+  tubeSound: {fileID: 8300000, guid: fade346f1f634cd459292bc987a7ee5f, type: 3}
 --- !u!1 &3363213924393069691
 GameObject:
   m_ObjectHideFlags: 0

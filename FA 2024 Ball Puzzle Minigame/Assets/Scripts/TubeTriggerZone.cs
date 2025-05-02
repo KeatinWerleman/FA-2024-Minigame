@@ -9,6 +9,9 @@ public class TubeTriggerZone : MonoBehaviour
     public Collider2D affectedWalls;
     public List<GameObject> triggerZones;
     public bool isBallInTube;
+    public AudioClip tubeSound;
+    private float volume;
+
     
 
     // Start is called before the first frame update
@@ -36,6 +39,7 @@ public class TubeTriggerZone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        volume = PlayerPrefs.GetFloat("Sound Effects Volume");
         foreach (var mirror in mirrors)
         {
             if (mirror == null)
@@ -53,6 +57,7 @@ public class TubeTriggerZone : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        SoundFXManager.Instance.PlaySoundFXClip(tubeSound, this.gameObject.transform, volume);
         
         Debug.Log("ENTERED TRIGGER ZONE");
         if (collision.gameObject.tag == "Ball" || collision.gameObject.tag == "Special Ball")
