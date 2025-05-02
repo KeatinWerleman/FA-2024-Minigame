@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 26413314}
   - component: {fileID: 26413313}
   - component: {fileID: 26413312}
+  - component: {fileID: 26413315}
   m_Layer: 0
   m_Name: Open Tutorial Button (1)
   m_TagString: Untagged
@@ -390,6 +391,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26413310}
   m_CullTransparentMesh: 1
+--- !u!114 &26413315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26413310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a039c2a8b771e24690b508365e9ef1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonColor: {r: 0, g: 0, b: 0, a: 0}
+  buttonImage: {fileID: 0}
+  currentRedValue: 0
+  currentGreenValue: 0
+  currentBlueValue: 0
+  isMovingUp: 0
+  changeValue: 0
+  flashingSpeed: 0
+  isRedChanging: 1
+  isGreenChanging: 0
+  isBlueChanging: 0
 --- !u!1 &52896403
 GameObject:
   m_ObjectHideFlags: 0
@@ -2385,6 +2409,14 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1080
       objectReference: {fileID: 0}
+    - target: {fileID: 2046097900811593264, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: isRedChanging
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046097900811593264, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: isGreenChanging
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3631244170541892040, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.741062
@@ -2686,7 +2718,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Positions:
   - {x: 0.5, y: 0.5, z: 0}
   - {x: 0.5, y: -0.5, z: 0}

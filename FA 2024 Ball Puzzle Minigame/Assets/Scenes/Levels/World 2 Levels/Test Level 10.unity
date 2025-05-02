@@ -596,7 +596,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: e1700ab1512aefe41be2362a6cc825c6, type: 3}
-  m_Color: {r: 0.09019608, g: 0.5058824, b: 0.89019614, a: 1}
+  m_Color: {r: 0.50980395, g: 0.5058824, b: 0.7607844, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2077,11 +2077,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1230111486703909183, guid: 99b79f101b9827b418598d6b47412d21, type: 3}
       propertyPath: hitCount
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1230111486703909183, guid: 99b79f101b9827b418598d6b47412d21, type: 3}
       propertyPath: maxHitCount
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4480273100766533243, guid: 99b79f101b9827b418598d6b47412d21, type: 3}
       propertyPath: m_Offset.x
@@ -2158,7 +2158,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.08627451, g: 0.5058824, b: 0.89019614, a: 1}
+  m_Color: {r: 0.50980395, g: 0.5019608, b: 0.7607844, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3066,7 +3066,7 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 1511046897775634536, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2170239273932717841, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_fontColor.b

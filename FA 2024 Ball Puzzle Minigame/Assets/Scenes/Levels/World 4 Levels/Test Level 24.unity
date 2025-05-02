@@ -139,6 +139,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tube Endpoint (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4458184296213729620, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: m_Color.b
+      value: 0.28627452
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458184296213729620, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: m_Color.g
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458184296213729620, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: m_Color.r
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458184296213729620, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5873801793329141001, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
       propertyPath: affectedWalls
       value: 
@@ -860,6 +876,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tube Endpoint
       objectReference: {fileID: 0}
+    - target: {fileID: 4458184296213729620, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: m_Color.b
+      value: 0.28627452
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458184296213729620, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: m_Color.g
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458184296213729620, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: m_Color.r
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458184296213729620, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5873801793329141001, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
       propertyPath: affectedWalls
       value: 
@@ -1508,6 +1540,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 496129211}
     m_Modifications:
+    - target: {fileID: 1630155160228063189, guid: 9e148f4a3335b6d4bb871a4e65fed150, type: 3}
+      propertyPath: m_Color.b
+      value: 0.28627452
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630155160228063189, guid: 9e148f4a3335b6d4bb871a4e65fed150, type: 3}
+      propertyPath: m_Color.g
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630155160228063189, guid: 9e148f4a3335b6d4bb871a4e65fed150, type: 3}
+      propertyPath: m_Color.r
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630155160228063189, guid: 9e148f4a3335b6d4bb871a4e65fed150, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3361042702090216167, guid: 9e148f4a3335b6d4bb871a4e65fed150, type: 3}
       propertyPath: m_Name
       value: Tube
@@ -2583,6 +2631,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tube Endpoint
       objectReference: {fileID: 0}
+    - target: {fileID: 4458184296213729620, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: m_Color.b
+      value: 0.28627452
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458184296213729620, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: m_Color.g
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458184296213729620, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: m_Color.r
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458184296213729620, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5873801793329141001, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
       propertyPath: affectedWalls
       value: 
@@ -2793,6 +2857,22 @@ PrefabInstance:
     - target: {fileID: 3363213924393069691, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
       propertyPath: m_Name
       value: Tube Endpoint (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458184296213729620, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: m_Color.b
+      value: 0.28627452
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458184296213729620, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: m_Color.g
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458184296213729620, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: m_Color.r
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4458184296213729620, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5873801793329141001, guid: f30ec5915afe01e4bafe928cda05af73, type: 3}
       propertyPath: affectedWalls
@@ -3048,7 +3128,7 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 1511046897775634536, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2170239273932717841, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_fontColor.b
@@ -3234,6 +3314,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 383400442}
     m_Modifications:
+    - target: {fileID: 1630155160228063189, guid: 9e148f4a3335b6d4bb871a4e65fed150, type: 3}
+      propertyPath: m_Color.b
+      value: 0.28627452
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630155160228063189, guid: 9e148f4a3335b6d4bb871a4e65fed150, type: 3}
+      propertyPath: m_Color.g
+      value: 0.34509805
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630155160228063189, guid: 9e148f4a3335b6d4bb871a4e65fed150, type: 3}
+      propertyPath: m_Color.r
+      value: 0.1764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 1630155160228063189, guid: 9e148f4a3335b6d4bb871a4e65fed150, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4042111592953641847, guid: 9e148f4a3335b6d4bb871a4e65fed150, type: 3}
       propertyPath: m_Name
       value: Tube Straight

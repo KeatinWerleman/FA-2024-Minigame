@@ -286,9 +286,11 @@ MonoBehaviour:
   currentRedValue: 0
   currentGreenValue: 0
   currentBlueValue: 0
+  isMovingUp: 0
+  changeValue: 0
   flashingSpeed: 0
   isRedChanging: 0
-  isGreenChanging: 0
+  isGreenChanging: 1
   isBlueChanging: 0
 --- !u!1 &52896403
 GameObject:
@@ -1318,6 +1320,7 @@ GameObject:
   - component: {fileID: 836369829}
   - component: {fileID: 836369831}
   - component: {fileID: 836369830}
+  - component: {fileID: 836369832}
   m_Layer: 0
   m_Name: TMP - Open Tutorial Button
   m_TagString: Untagged
@@ -1441,6 +1444,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836369828}
   m_CullTransparentMesh: 1
+--- !u!114 &836369832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836369828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a039c2a8b771e24690b508365e9ef1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonColor: {r: 0, g: 0, b: 0, a: 0}
+  buttonImage: {fileID: 0}
+  currentRedValue: 0
+  currentGreenValue: 0
+  currentBlueValue: 0
+  isMovingUp: 0
+  changeValue: 0
+  flashingSpeed: 0
+  isRedChanging: 0
+  isGreenChanging: 1
+  isBlueChanging: 0
 --- !u!1 &974653995
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,7 +2501,7 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 1511046897775634536, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2170239273932717841, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_fontColor.b

@@ -1810,7 +1810,7 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 1511046897775634536, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4279771492123291134, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7364,6 +7364,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 716.2
       objectReference: {fileID: 0}
+    - target: {fileID: 5831262341550581978, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 6413739792823595925, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
       propertyPath: m_Name
       value: Level Tutorials

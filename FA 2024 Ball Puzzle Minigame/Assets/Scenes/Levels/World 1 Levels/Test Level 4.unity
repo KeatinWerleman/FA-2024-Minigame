@@ -153,7 +153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 155885606967408500, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -144.475
+      value: -140.875
       objectReference: {fileID: 0}
     - target: {fileID: 255585605885001790, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
       propertyPath: m_Color.b
@@ -259,6 +259,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -184
       objectReference: {fileID: 0}
+    - target: {fileID: 5831262341550581978, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 6413739792823595925, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
       propertyPath: m_Name
       value: Level Tutorials
@@ -305,7 +309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7889637237013515789, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -319.475
+      value: -315.875
       objectReference: {fileID: 0}
     - target: {fileID: 8098085950075678798, guid: 8c90c93f9766ab643bfdb15931faadb4, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1042,7 +1046,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Positions:
   - {x: 0.5, y: 0.4, z: 0}
   - {x: 0.5, y: -0.4, z: 0}
@@ -1138,7 +1142,7 @@ PrefabInstance:
       objectReference: {fileID: 519420031}
     - target: {fileID: 1511046897775634536, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_SortingOrder
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4279771492123291134, guid: d51ca4364a53d29489c2b70705dc10d2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1710,7 +1714,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 0
   m_Positions:
   - {x: 0.5, y: 0.4, z: 0}
   - {x: 0.5, y: -0.4, z: 0}
