@@ -10,16 +10,17 @@ public class BallLauncher : MonoBehaviour
     public GameObject ballPrefab;
     public GameObject specialBallPrefab;
     public int specialBallCount;
-    public TextMeshProUGUI specialBallLaunchButtonText;
+    
     public float launchSpeed;
     public Transform ballSpawnPoint;
-    public int maxAvailibleBalls;
-    public int availibleBalls;
+    
+    
     public Color ballColor;
     public List<GameObject> ballsInPlay;
     public Vector2 launchDirection;
     public bool isInOriginalLocation;
-    public TextMeshProUGUI ballsLeftText;
+    public GameObject undoButton;
+   
     public AudioClip ballLaunchClip;
     public GameObject ballLaunchParticleSystem;
 
@@ -40,10 +41,8 @@ public class BallLauncher : MonoBehaviour
 
     private void Start()
     {
+
         
-        ballsLeftText.SetText(availibleBalls.ToString());
-        availibleBalls = maxAvailibleBalls;
-        specialBallLaunchButtonText.SetText("Launch Special Ball (" + specialBallCount.ToString() + ")");
         isInOriginalLocation = true;
         spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -68,18 +67,17 @@ public class BallLauncher : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.W))
             {
 
-                if (availibleBalls > 0)
-                {
+                
+                
                     LaunchBall();
-                }
+                
             }
 
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (availibleBalls > 0 && specialBallCount >0)
-                {
+                
                     LaunchSpecialBall();
-                }
+                
             }
         }
 
@@ -97,36 +95,38 @@ public class BallLauncher : MonoBehaviour
             ballsInPlay.RemoveAt(0);
             
         }
-        if (availibleBalls > 0)
+        
+        
+        if (tubeTriggerZones != null && tubeTriggerZones.Count > 0)
         {
-            if (tubeTriggerZones != null && tubeTriggerZones.Count > 0)
+            foreach (GameObject tubeTrigger in tubeTriggerZones)
             {
-                foreach (GameObject tubeTrigger in tubeTriggerZones)
-                {
-                    tubeTrigger.GetComponent<TubeTriggerZone>().isBallInTube = false;
-                }
-
+                tubeTrigger.GetComponent<TubeTriggerZone>().isBallInTube = false;
             }
-            GameManager.Instance.TurnLaunchStateOff();
-            SoundFXManager.Instance.PlaySoundFXClip(ballLaunchClip, transform, volume);
-            ParticleSystem.MainModule main = ballLaunchParticleSystem.GetComponent<ParticleSystem>().main;
-            main.startColor = spriteRenderer.color;
-            
-            GameObject newBall = Instantiate(ballPrefab, ballSpawnPoint.position, Quaternion.identity);
-            newBall.GetComponent<Rigidbody2D>().AddForce(launchDirection * launchSpeed);
-            newBall.GetComponent<SpriteRenderer>().color = ballColor;
-            ballsInPlay.Add(newBall);
-            availibleBalls -= 1;
 
-            ballsLeftText.SetText(availibleBalls.ToString());
-            if (PlayerPrefs.GetString("Are Particles On") == "true")
-            {
-                var particles = Instantiate(ballLaunchParticleSystem, ballSpawnPoint.transform.position, ballSpawnPoint.rotation);
-                Destroy(particles, 0.5f);
-            }
-            Debug.Log("Ball Launched /n Balls Remaining: " + availibleBalls);
+        }
+        GameManager.Instance.TurnLaunchStateOff();
+        SoundFXManager.Instance.PlaySoundFXClip(ballLaunchClip, transform, volume);
+        ParticleSystem.MainModule main = ballLaunchParticleSystem.GetComponent<ParticleSystem>().main;
+        main.startColor = spriteRenderer.color;
             
-        } 
+        GameObject newBall = Instantiate(ballPrefab, ballSpawnPoint.position, Quaternion.identity);
+        newBall.GetComponent<Rigidbody2D>().AddForce(launchDirection * launchSpeed);
+        newBall.GetComponent<SpriteRenderer>().color = ballColor;
+        GameManager.Instance.UpdateScore(3);
+        undoButton.SetActive(true);
+        ballsInPlay.Add(newBall);
+        
+
+        
+        if (PlayerPrefs.GetString("Are Particles On") == "true")
+        {
+            var particles = Instantiate(ballLaunchParticleSystem, ballSpawnPoint.transform.position, ballSpawnPoint.rotation);
+            Destroy(particles, 0.5f);
+        }
+        // Debug.Log("Ball Launched /n Balls Remaining: " + availibleBalls);
+            
+        
     }
 
     public void LaunchSpecialBall()
@@ -137,33 +137,33 @@ public class BallLauncher : MonoBehaviour
             ballsInPlay.RemoveAt(0);
 
         }
-        if (specialBallCount > 0 && availibleBalls > 0)
+        
+        
+        if (tubeTriggerZones != null && tubeTriggerZones.Count > 0)
         {
-            if (tubeTriggerZones != null && tubeTriggerZones.Count > 0)
+            foreach (GameObject tubeTrigger in tubeTriggerZones)
             {
-                foreach (GameObject tubeTrigger in tubeTriggerZones)
-                {
-                    tubeTrigger.GetComponent<TubeTriggerZone>().isBallInTube = false;
-                }
-
+                tubeTrigger.GetComponent<TubeTriggerZone>().isBallInTube = false;
             }
-            GameManager.Instance.TurnLaunchStateOff();
-            SoundFXManager.Instance.PlaySoundFXClip(ballLaunchClip, transform, volume);
-            ParticleSystem.MainModule main = ballLaunchParticleSystem.GetComponent<ParticleSystem>().main;
-            main.startColor = spriteRenderer.color;
-            var particles = Instantiate(ballLaunchParticleSystem, ballSpawnPoint.transform.position, ballSpawnPoint.rotation);
-            GameObject newBall = Instantiate(specialBallPrefab, ballSpawnPoint.position, Quaternion.identity);
-            newBall.GetComponent<Rigidbody2D>().AddForce(launchDirection * launchSpeed);
-            newBall.GetComponent<SpriteRenderer>().color = ballColor;
-            ballsInPlay.Add(newBall);
-            availibleBalls -= 1;
-            specialBallCount -= 1;
-            specialBallLaunchButtonText.SetText("Launch Special Ball (" + specialBallCount.ToString() + ")");
-            ballsLeftText.SetText(availibleBalls.ToString());
-            
-            Debug.Log("Ball Launched /n Balls Remaining: " + availibleBalls);
-            Destroy(particles, 0.5f);
+
         }
+        GameManager.Instance.TurnLaunchStateOff();
+        
+        SoundFXManager.Instance.PlaySoundFXClip(ballLaunchClip, transform, volume);
+        ParticleSystem.MainModule main = ballLaunchParticleSystem.GetComponent<ParticleSystem>().main;
+        main.startColor = spriteRenderer.color;
+        var particles = Instantiate(ballLaunchParticleSystem, ballSpawnPoint.transform.position, ballSpawnPoint.rotation);
+        GameObject newBall = Instantiate(specialBallPrefab, ballSpawnPoint.position, Quaternion.identity);
+        newBall.GetComponent<Rigidbody2D>().AddForce(launchDirection * launchSpeed);
+        newBall.GetComponent<SpriteRenderer>().color = ballColor;
+        GameManager.Instance.UpdateScore(5);
+        undoButton.SetActive(true);
+        ballsInPlay.Add(newBall);
+            
+            
+            
+            Destroy(particles, 0.5f);
+        
     }
 
     public void ClearField()
@@ -171,6 +171,7 @@ public class BallLauncher : MonoBehaviour
         if (ballsInPlay.Count > 0)
         {
             Destroy(ballsInPlay[0]);
+            undoButton.SetActive(false);
             ballsInPlay.RemoveAt(0);
         }
         

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TubeTriggerZone : MonoBehaviour
@@ -11,6 +12,7 @@ public class TubeTriggerZone : MonoBehaviour
     public bool isBallInTube;
     public AudioClip tubeSound;
     private float volume;
+    public int ballTubeTravelSpeed;
 
     
 
@@ -62,7 +64,6 @@ public class TubeTriggerZone : MonoBehaviour
         Debug.Log("ENTERED TRIGGER ZONE");
         if (collision.gameObject.tag == "Ball" || collision.gameObject.tag == "Special Ball")
         {
-
             if (isBallInTube == true)
             {
                 isBallInTube = false;

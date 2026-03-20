@@ -7,20 +7,18 @@ using TMPro;
 
 public class Mirror : MonoBehaviour
 {
-    public int hitCount;
-    public int maxHitCount;
+    
     public GameObject thisMirror;
     public string wallTag;
     public AudioClip ballBounceSound;
     public float volume;
-    public TextMeshPro hitCountText;
+    
     public GameObject mirrorHitParticleSystem;
     
     // Start is called before the first frame update
     void Start()
     {
-        hitCount = maxHitCount;
-        hitCountText.SetText(hitCount.ToString());
+        
     }
 
     // Update is called once per frame
@@ -37,17 +35,18 @@ public class Mirror : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ball" || collision.gameObject.tag == "Special Ball")
         {
-            hitCount--;
+            //hitCount--;
             if (collision.gameObject.tag == "Special Ball")
             {
-                hitCount--;
+                GameManager.Instance.UpdateScore(1);
             }
-            hitCountText.SetText(hitCount.ToString());
+            
             
             Debug.Log(collision.gameObject.transform.position);
             collision.transform.position = new Vector3(Mathf.RoundToInt(collision.transform.position.x), Mathf.RoundToInt(collision.transform.position.y), 0f);
             Debug.Log("ROUNDED POS" + collision.gameObject.transform.position);
             SoundFXManager.Instance.PlaySoundFXClip(ballBounceSound, transform, volume);
+            GameManager.Instance.UpdateScore(1);
 
             if (PlayerPrefs.GetString("Are Particles On") == "true")
             {
@@ -60,10 +59,7 @@ public class Mirror : MonoBehaviour
 
         
 
-        if (hitCount <= 0)
-        {
-            Destroy(thisMirror);
-        }
+        
     }
 
 }

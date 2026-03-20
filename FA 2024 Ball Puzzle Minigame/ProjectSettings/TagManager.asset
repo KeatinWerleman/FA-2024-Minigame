@@ -27,16 +27,16 @@ TagManager:
   - Ball
   - Water
   - UI
-  - Mirror Text
+  - 
   - Tube
   - Mirror
   - Mouse
   - Mirror Wall collider
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Switch
+  - Target
+  - Ball
+  - Tube
+  - Mirror Text
   - 
   - 
   - 
@@ -56,4 +56,28 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 2335128533
+    locked: 0
+  - name: Walls
+    uniqueID: 2437846589
+    locked: 0
+  - name: Faded Walls/Mirrors
+    uniqueID: 967593887
+    locked: 0
+  - name: Switches and Targets
+    uniqueID: 2043037747
+    locked: 0
+  - name: Ball
+    uniqueID: 1057528275
+    locked: 0
+  - name: Mirrors
+    uniqueID: 3293387813
+    locked: 0
+  - name: Tube
+    uniqueID: 2546034009
+    locked: 0
+  - name: Mirror Text
+    uniqueID: 4289955191
     locked: 0

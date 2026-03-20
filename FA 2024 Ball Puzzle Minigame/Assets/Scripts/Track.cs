@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -51,6 +52,11 @@ public class Track : MonoBehaviour
                     objectOnTrack.transform.localPosition = new Vector3(upperEndpoint.localPosition.x, (Mathf.Round((upperEndpoint.localPosition.y + lowerEndpoint.localPosition.y) / 2)), 0f);
                 }
             }
+        }
+
+        else if (objectOnTrack == null)
+        {
+            
         }
        
     }

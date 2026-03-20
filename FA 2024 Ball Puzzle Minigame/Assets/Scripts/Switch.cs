@@ -60,6 +60,7 @@ public class Switch : MonoBehaviour
                             Debug.Log("Special Ball Touched Switch");
                             Destroy(collision.gameObject);
                             GameManager.Instance.TurnLaunchStateOn();
+                            GameManager.Instance.UpdateScore(4);
 
 
                         }
@@ -87,6 +88,7 @@ public class Switch : MonoBehaviour
                         }
 
                         GameManager.Instance.TurnLaunchStateOn();
+                        GameManager.Instance.UpdateScore(2);
                         Destroy(collision.gameObject);
 
 
@@ -127,6 +129,7 @@ public class Switch : MonoBehaviour
                                 Destroy(particles, 0.5f);
                             }
                             Debug.Log("Special Ball Touched Button");
+                            GameManager.Instance.UpdateScore(4);
                             
 
 
@@ -152,10 +155,12 @@ public class Switch : MonoBehaviour
                     objectLocationSprite.transform.position = tempPosition;
                     objectLocationSprite.transform.rotation = tempRotation;
                     if (PlayerPrefs.GetString("Are Particles On") == "true")
+                    
                     {
                         var particles = Instantiate(switchHitParticleSystem, transform.position, Quaternion.identity);
                         Destroy(particles, 0.5f);
                     }
+                    GameManager.Instance.UpdateScore(2);
 
 
                 }

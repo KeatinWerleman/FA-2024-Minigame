@@ -7,6 +7,9 @@ public class Ball : MonoBehaviour
 {
     public float ballSpeed;
     public Vector2 ballDirection;
+    [SerializeField] Vector2 lastBallDirection;
+    public Rigidbody2D ballRigidbody;
+    public int delayFrames;
     
     
     
@@ -16,22 +19,37 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
-        ballDirection = new Vector2(BallLauncher.Instance.launchDirection.x, BallLauncher.Instance.launchDirection.y);
+        ballRigidbody.velocity = new Vector2(BallLauncher.Instance.launchDirection.x, BallLauncher.Instance.launchDirection.y).normalized * ballSpeed;
         
-        
-        
+        ballRigidbody = GetComponent<Rigidbody2D>();
+
+
+
 }
     private void Update()
     {
-        transform.position += new Vector3(ballDirection.x, ballDirection.y, 0f) * ballSpeed * Time.deltaTime;
-        transform.rotation = Quaternion.identity;
-       
+        UnityEngine.Debug.Log("Ball Velocity:" + ballRigidbody.velocity);
+        
+
+    }
+
+    private void LateUpdate()
+    {
+       // ballDirection = lastBallDirection;
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        var firstContact = collision.contacts[0];
+
+        Vector2 collisionNormal = collision.contacts[0].normal;
+        ;
+        ballDirection = Vector2.Reflect(ballRigidbody.velocity, collisionNormal).normalized;
+        UnityEngine.Debug.Log("Ball Direction:" + ballDirection);
+        ballRigidbody.velocity = new Vector2 (ballDirection.x, ballDirection.y) * ballSpeed;
+        UnityEngine.Debug.Log("Ball Velocity:" + ballRigidbody.velocity);
+
         
-        ballDirection = Vector2.Reflect(ballDirection.normalized, firstContact.normal);
-        ballDirection = new Vector2(Mathf.Round(ballDirection.x), Mathf.Round(ballDirection.y));
     }
+
+    
 }
+       

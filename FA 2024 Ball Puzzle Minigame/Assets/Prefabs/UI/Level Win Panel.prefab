@@ -47,7 +47,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelSelectSceneName: Main Menu
   winScreenSceneName: Win Screen
-  isTestBuild: 1
 --- !u!1 &4653294448406269173
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,6 +59,7 @@ GameObject:
   - component: {fileID: 8434526017485518025}
   - component: {fileID: 814970368903188019}
   - component: {fileID: 1317174970210500821}
+  - component: {fileID: 4477118284620629166}
   m_Layer: 5
   m_Name: Next Level Button
   m_TagString: Untagged
@@ -181,6 +181,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4477118284620629166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4653294448406269173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71c4795dc5f65b489cd4d49dbf31773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlighedScale: {x: 1.1, y: 1.1, z: 1.1}
+  nonHighlightedScale: {x: 1, y: 1, z: 1}
+  scaleChangeTime: 0.25
 --- !u!1 &5679592029254923737
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +208,7 @@ GameObject:
   - component: {fileID: 4923948137058388496}
   - component: {fileID: 5660324717747087346}
   - component: {fileID: 4436729019473510241}
+  - component: {fileID: 6380568429799687491}
   m_Layer: 5
   m_Name: Reset Button
   m_TagString: Untagged
@@ -314,6 +330,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6380568429799687491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5679592029254923737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d71c4795dc5f65b489cd4d49dbf31773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highlighedScale: {x: 1.1, y: 1.1, z: 1.1}
+  nonHighlightedScale: {x: 1, y: 1, z: 1}
+  scaleChangeTime: 0.25
 --- !u!1 &6992964890539025542
 GameObject:
   m_ObjectHideFlags: 0
